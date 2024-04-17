@@ -1,0 +1,291 @@
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    color: black;
+    background-color: wheat;
+}
+.all{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    background: black;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: 100%;
+    height: 8vh; /* Altura do header */
+    margin: 0;
+    color: #fff;
+    overflow: hidden;
+    position: fixed;
+}
+
+.navbar {
+    margin-top: 0px;
+    margin-bottom: 25px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 20px;
+    overflow: hidden;
+}
+
+.logo{
+    margin-top: 2%;
+    width: 20%;
+    height: auto;
+}
+
+.links{
+    margin-top: 2%;
+    margin-left: 60%;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+}
+
+.nav-links li {
+    margin-left: 15px;
+    justify-content: right;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+.nav-links li a:hover {
+    color: #ffcc00;
+}
+
+.container {
+    margin-top: 5%;
+    margin-bottom: 1%;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.img {
+    align-items: center;
+    width: 700px;
+    height: auto;
+    justify-content: flex-start;
+    align-items: center;/* vertical */
+    margin-top: 1%;
+}
+
+.img img {
+    max-width: 100%;
+    max-height: 100%;
+    border: 1px solid black;
+    border-radius: 5%;
+    object-fit: contain;
+    margin-bottom: 10%;
+}
+
+.text {
+    margin-top: 0%;
+    margin-bottom: 5%;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 0 10px;
+    align-items: left;
+}
+
+.text h3 {
+    /* background: wheat;*/
+    max-width: 100%;
+    margin-bottom: 0%;
+    margin-top: 2%;
+}
+
+.text p {
+    /* background: wheat;*/
+    max-width: 100%;
+    text-align: justify;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    font-size: 100%;
+}
+
+.text .social-medias {
+    display: flex;
+    flex-direction: row;
+    padding: 0 2px;
+    margin-top: 1%;
+}
+
+.text .icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;/* Alinha os itens verticalmente */
+
+}
+
+.text .icons .acess img {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.text .icons .acess p {
+    margin: 0;
+    font-size: 200%
+}
+
+.text .social-medias .icon {
+    margin-right: 10px;
+}
+
+.text .social-medias .icon img {
+    margin-top: 0%;
+    width: 30px;
+    height: auto;
+}
+
+.text .acess {
+    display: flex;
+    width: auto;
+    height: auto;
+    text-size-adjust: 0.01%;
+}
+
+.container .box {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 300px;
+    border-radius: 5%;
+    overflow: hidden;
+    border: 2px solid black;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.container .box .imagem {
+    width: 100%;
+    height: 45%;
+    overflow: hidden;
+    border: 2px solid black;
+}
+
+.container .box .imagem img {
+    width: 100%;
+    height: auto;
+}
+
+.container .conteudo {
+    width: 100%;
+    height: 65%;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.container .conteudo p {
+    text-align: justify;
+    padding: 0 10px;
+    margin-top: 0%;
+}
+
+.container .conteudo h3 {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    text-align: justify;
+    padding: 0 10px;
+    text-decoration: none;
+}
+
+#burguer-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;/* Mantém a proporção sem distorcer a imagem */
+    margin: auto;
+    margin-top: -5%;
+}
+
+.input {
+    display: flex;
+    width: 100%;
+    height: 150px;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-input {
+    width: 90%;
+    height: 90%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 5px;
+    outline: none;
+    word-wrap: break-word;
+    /* Permite que o texto quebre em várias linhas */
+    overflow-wrap: break-word;
+}
+
+@media (max-width: 575.98px) {
+    body{
+        height: 230vh;
+    }
+    .logo {
+        display: none;
+    }
+    .links {
+        width: 100%; 
+        display: flex;
+        justify-content: center; 
+    }
+    .nav-links li {
+        margin-left: 10px; 
+    }
+}
+
+/* Media query para tablets e celulares maiores */
+@media (min-width: 576px) and (max-width: 900px) {
+    .body{
+        height:150vh;
+    }
+
+    .links {
+        width: 100%; 
+        display: flex;
+        justify-content: center; 
+    }
+    .nav-links li {
+        margin-left: 10px; 
+    }
+    #main-info{
+        margin-top: 10%
+    }
+    .container {
+        margin-top: 25%;
+        margin-bottom: 0%;
+        margin-left: 10%;
+    }
+}
+
+/* Media query para telas maiores (desktops e tablets em modo paisagem) */
+
+
+
+
