@@ -1,211 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Document</title>
 
-    <link rel="stylesheet" href="assets/css/style.css">
-
     <style>
-        #coworkes {
-            justify-content: space-around;
-        }
-        .separator{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .separator img{
-            border-radius: 5%;
-            border-right: 10px;
-            border-left: 5px;
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
+        .teste {
+            background-color: #fff;
+            padding: 10%;
+            width: 70vw;
+            height: 30px;
+            margin: 2px;
         }
     </style>
 </head>
 
 <body>
     <header>
-        <nav class="navbar">
+        <h1 class="mobile" id="mobile-h1">
+            <a href="#">
+                Samuel Araujo
+            </a>
+        </h1>
 
-            <div class="logo">
-                <h1>SAMUEL ARAUJO</h1>
+        <div class="pc-header">
+
+                <a id="logo-button" href="#"><button>Samuel Araujo</button></a>
+
+
+            <div class="pc-menu">
+                <a href="#"><button>Home</button></a>
+                <a href="#"><button>Projects</button></a>
+                <a href="#"><button>My Github</button></a>
             </div>
-            <div class="links">
-                <ul class="nav-links">
-                    <li><a href="http://127.0.0.1:5500/index.html">Home</a></li>
-                    <li><a href="https://github.com/x99oly" target="_blank">My Github</a></li>
-                </ul>
-            </div>
-        </nav>
+        </div>
     </header>
 
-    <div class="all">
-        <div class="container" id="main-info">
+    <main>
+        <div class="container" id="home">
+            <h2>ABOUT ME</h2>
 
-            <div class="img">
-                <img src="assets/images/myPhoto.jpg" alt="">
-            </div>
+            <img id="img-perfil" src="assets/images/Skipping rope-bro orange.png" alt="">
 
-            <div class="text">
-                <h3>
-                    Sobre mim
-                </h3>
-                <p>
-                    Me chamo Samuel Araujo de Oliveira, tenho 25 anos e sou natural de Ribeirão das Neves, MG.
-                    Atualmente,
-                    estou no primeiro semestre do curso de Desenvolvimento de Software na PUC Minas. Desde jovem, sempre
-                    fui
-                    fascinado pelos desafios e pela lógica por trás dos números, especialmente na matemática. Agora,
-                    estou
-                    canalizando essa paixão para o campo do desenvolvimento de software, onde posso aplicar habilidades
-                    técnicas para resolver problemas e criar soluções inovadoras.
+            <div class="color-box" id="homeColor-box"></div>
 
-                    Estou comprometido em aproveitar ao máximo minha experiência na PUC Minas, adquirindo conhecimentos
-                    avançados em programação e desenvolvimento de software. Estou ansioso para explorar novas ideias,
-                    aprender com colegas e contribuir para projetos desafiadores que me permitam aplicar minha
-                    criatividade
-                    e habilidades técnicas.
-                    <br><strong>LOCATION: </strong>Rib. Das Neves, MG, Brasil
-                    <br><strong>SITE: </strong>www.aindanaotenhoum.com.br
-                </p>
-
-                <div class="icons">
-                    <div class="social-medias">
-                        <a class="icon" href="#">
-                            <img src="assets/images/instagram.png" alt="">
-                        </a>
-                        <a class="icon" href="https://web.whatsapp.com/">
-                            <img src="assets/images/whatsapp (1).png" alt="">
-                        </a>
-                        <a class="icon" href="#">
-                            <img src="assets/images/linkedin.png" alt="">
-                        </a>
-                    </div>
-
-                    <div class="acess">
-                        <img src="assets/images/do-utilizador.png" alt="">
-                        <p>: 00</p>
-                    </div>
-                </div>
-
+            <div class="icons">
+                <a href="#"><img class="icon" src="assets/images/linkedin.png" alt=""></a>
+                <a href="#"><img class="icon" src="assets/images/instagram.png" alt=""></a>
+                <a href="#"><img class="icon" src="assets/images/whatsapp.png" alt=""></a>
             </div>
 
         </div>
 
-        <div class="container" id="box-repository">
+        <div class="container" id="resume">
+            <h3>Samuel A. De Oliveira</h3>
+            <p>
+                Olá! Sou Samuel, um entusiasta de 25 anos apaixonado por resolver problemas e explorar o mundo da
+                tecnologia. Atualmente, estou no primeiro período do curso de Sistemas de Informação na PUC Minas, onde
+                estou mergulhando nas bases sólidas da computação.
 
-            <div class="box">
+                <br>Tenho uma habilidade natural para comunicação, o que me permite expressar minhas ideias com clareza
+                e
+                trabalhar de forma eficaz em equipe. Enquanto adoro resolver problemas, sou movido pelo desafio de me
+                superar em áreas que ainda não domino completamente.
 
-                <div class="imagem">
-                    <a href="https://github.com/x99oly/Chess" target="_blank">
-                        <img id="chess-img" src="assets/images/chess.jpg" alt="">
-                    </a>
-                </div>
-                <div class="conteudo">
-                    <a href="https://github.com/x99oly/Chess" target="_blank">
-                        <h3>Chess Game</h3>
-                    </a>
-                    <p>
-                        Dê vida ao xadrez online neste emocionante projeto feito no Unity com C#. Desafie jogadores
-                        globais, aprimore suas estratégias e mergulhe em um ambiente virtual imersivo. Experimente o
-                        jogo clássico de xadrez de forma nova e interativa, com movimentos calculados e desafios
-                        estimulantes!
-                    </p>
-                </div>
+                <br>Embora não tenha experiência profissional, minha jornada acadêmica já inclui conquistas
+                significativas.
+                Desenvolvi um jogo no estilo shoot'em up e atualmente estou trabalhando em um jogo de xadrez online,
+                além de um site para simulação de vendas online usando CRUD e SQL Server, juntamente com tecnologias
+                front-end como HTML, CSS e JavaScript.
 
-            </div>
+                <br>Sou conhecido por minha dedicação em mergulhar em problemas até encontrarem solução, muitas vezes
+                perdendo a noção do tempo até o despertador me lembrar que já é dia seguinte.
 
-            <div class="box">
+                <br>Meu objetivo é construir uma carreira sólida em desenvolvimento back-end, com foco em tecnologias de
+                cloud server, onde posso continuar a explorar meu amor pela resolução de problemas e pela criação de
+                soluções inovadoras.
 
-                <div class="imagem">
-                    <a href="https://github.com/x99oly/Chess" target="_blank">
-                        <img id="burguer-img" src="assets/images/burguer.jpg" alt="">
-                    </a>
-                </div>
-                <div class="conteudo">
-                    <a href="https://github.com/ICEI-PUCMinas-PSG-SI-TI/icei-pucminas-psg-si-n-tiaw-2024-1-grupo-1-reserva-de-lanches"
-                        target="_blank">
-                        <h3>Reserva de lanches</h3>
-                    </a>
-                    <p>
-                        Desenvolvimento um site de reservas de lanches com HTML, CSS, JavaScript, Node.js e SQL,
-                        oferecendo uma experiência moderna e eficiente aos usuários. Este projeto integra tecnologias
-                        web para permitir reservas rápidas e gerenciamento básico de dados, garantindo uma interface
-                        interativa e responsiva.
-                    </p>
-                </div>
+                <br>Se você está buscando alguém determinado, apaixonado por tecnologia e pronto para enfrentar
+                desafios,
+                entre em contato. Estou ansioso para contribuir e aprender neste emocionante campo da computação.
+                <br>
+                <br>Location: Belo Horizonte, MG, Brazil.
+                <br>Site: www.aindanaotenhoum.com.br
 
-            </div>
-
-            <div class="box">
-
-                <div class="imagem">
-                    <a href="#" target="_blank">
-                        <img id="spaceship-img" src="assets/images/apaceShipGame.jpg" alt="">
-                    </a>
-                </div>
-                <div class="conteudo">
-                    <a href="#" target="_blank">
-                        <h3>Lost in nowhere</h3>
-                    </a>
-                    <p>
-                        Explore uma jornada intergaláctica repleta de combate intenso em nosso novo jogo de navinha
-                        shoot-em up. Pilote sua nave, dispare lasers e derrote chefes alienígenas em um universo
-                        vibrante e cheio de perigos. Melhore suas armas, sobreviva aos desafios e torne-se o herói do
-                        espaço!
-                    </p>
-                </div>
-
-            </div>
-
+            </p>
         </div>
 
-        <div class="container" id="text-input">
-            <div class="input">
-                <input class="user-input" type="text" id="nome" name="nome" placeholder="type here...">
-            </div>
-        </div>
+    </main>
 
-        <div class="container" id="coworkes">
-            <div class="separator">
-                <div class="imagem-coworker">
-                    <img src="assets/images/pessoa1.jpg" alt="">
-                </div>
-                <div class="coworker-name">
-                    <h3>Cesar</h3>
-                    </a>
-                </div>
-            </div>
-
-            <div class="separator">
-                <div class="imagem-coworker">
-                    <img src="assets/images/pessoa2.jpg" alt="">
-                </div>
-                <div class="coworker-name">
-                    <h3>Lucia</h3>
-                    </a>
-                </div>
-            </div>
-
-            <div class="separator">
-                <div class="imagem-coworker">
-                    <img  src="assets/images/pessoa3.jpg" alt="">
-                </div>
-                <div class="coworker-name">
-                    <h3>Patrick</h3>
-                    </a>
-                </div>
-            </div>
-
-        </div>
+    <div class="menu">
+        <a href="#"><button>Home</button></a>
+        <a href="#"><button>Projects</button></a>
+        <a href="#"><button>My Github</button></a>
     </div>
-
 
 </body>
 
