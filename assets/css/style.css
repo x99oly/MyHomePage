@@ -1,3 +1,21 @@
+.anton-regular {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.barlow-bold {
+    font-family: "Barlow", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.barlow-regular {
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 /*DEFINIÇÕES GLOBAIS / VARs */
 *,
 *::before,
@@ -22,8 +40,17 @@
     --white: #fff;
 }
 
+h1 {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 p {
     text-align: justify;
+    font-family: "Barlow", sans-serif;
+    font-weight: 200;
+    font-style: normal;
 }
 
 a {
@@ -114,12 +141,13 @@ header h1 {
     min-width: 300px;
     max-width: 700px;
     height: auto;
-    margin-bottom: 20vw;
+    margin: 0;
 }
 
 #home {
     height: 40vw;
     top: 10vw;
+    margin-bottom: 15vw;
 }
 
 #home #img-perfil {
@@ -175,11 +203,82 @@ header h1 {
 
 #resume {
     top: 7vh;
-    margin-bottom: 20vh;
+    margin-bottom: 12vh;
 }
 
 #resume h3 {
     margin-bottom: 2%;
+}
+
+
+#chessGame {
+    position: relative;
+    top: 0%;
+    height: 50vh;
+    margin-bottom: 0vh;
+}
+
+#chess-img-tittle {
+    position: absolute;
+    top: 2%;
+    left: 7%;
+    border-radius: 10px;
+    width: 92%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#chessGame img {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    width: 200px;
+    height: auto;
+}
+
+#chessGame #projetos-text {
+    position: absolute;
+    right: 40%;
+}
+
+#chessGame h1 {
+    font-size: 70px;
+    margin-bottom: 30vh;
+}
+
+#chessGame #chess-text {
+    position: absolute;
+    top: 5%;
+    left: 0%;
+}
+
+.container-text #game-text {
+    position: absolute;
+    top: 15%;
+    right: 0%;
+    writing-mode: vertical-lr;
+    transform: rotate(0deg);
+}
+
+.container.text {
+    display: flex;
+    align-items: center;
+    transform: rotate(-180deg);
+}
+
+#resume-chessGame {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    top: 65%;
+    left: 0%;
+    margin-bottom: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
 }
 
 /* ------ Tablets / vertical --------*/
@@ -227,15 +326,17 @@ header h1 {
     header #mobile-h1 {
         display: none;
     }
+
     main {
         width: 101vw;
         display: flex;
         flex-direction: column;
     }
 
-    header{
+    header {
         height: 8vh;
     }
+
     .pc-header {
         display: flex;
         z-index: 5;
@@ -260,17 +361,17 @@ header h1 {
         cursor: pointer;
     }
 
-    .pc-header #logo-button{
+    .pc-header #logo-button {
         position: absolute;
         left: 2%;
     }
 
-    .pc-header .pc-menu{
+    .pc-header .pc-menu {
         position: absolute;
         right: 2%;
     }
 
-    
+
     .container {
         z-index: 1;
         position: relative;
@@ -278,31 +379,31 @@ header h1 {
         min-width: 600px;
         max-width: 1400px;
     }
-    
+
     #home {
         position: relative;
         right: 0%;
         height: 40vw;
         top: 5vw;
     }
-    
+
     #home #img-perfil {
         top: 0vw;
         left: 0vh;
     }
-    
+
     #home h2 {
         top: 0%;
         left: 32%;
         font-size: clamp(5vw, 10vw, 20vw);
         height: 60%;
     }
-    
+
     .color-box {
-        width: 45vw; 
+        width: 45vw;
         left: 10%;
     }
-    
+
     .icons {
         top: 60vh;
         left: 8%;
@@ -311,26 +412,26 @@ header h1 {
         max-width: 440px;
         justify-content: space-between;
     }
-    
+
     #resume {
         position: absolute;
-        top: 25vh;
+        top: 30vh;
         margin: none;
         width: 700px;
         right: 11%;
     }
 
-    #resume p{
+    #resume p {
         font-size: 18px;
         position: absolute;
         top: 4vh;
     }
 
-    #resume h3{
+    #resume h3 {
         position: absolute;
         right: 0%;
         top: 0vh;
         font-weight: bold;
     }
-    
+
 }

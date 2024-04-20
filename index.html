@@ -5,7 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
+<!-- FONTES-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <title>oringinal</title>
 
     <style>
         .teste {
@@ -14,6 +24,14 @@
             width: 70vw;
             height: 30px;
             margin: 2px;
+        }
+
+        :root {
+            --darkBlue: #003049;
+            --red: #d62828;
+            --orange: #f77f00;
+            --black: #000;
+            --white: #fff;
         }
     </style>
 </head>
@@ -28,18 +46,19 @@
 
         <div class="pc-header">
 
-                <a id="logo-button" href="#"><button>Samuel Araujo</button></a>
+            <a id="logo-button" href="#"><button>Samuel Araujo</button></a>
 
 
             <div class="pc-menu">
                 <a href="#"><button>Home</button></a>
-                <a href="#"><button>Projects</button></a>
-                <a href="#"><button>My Github</button></a>
+                <a href="#chessGame"><button>Projects</button></a>
+                <a href="https://github.com/" target="_blank"><button>My Github</button></a>
             </div>
         </div>
     </header>
 
     <main>
+        <!-- About me-->
         <div class="container" id="home">
             <h2>ABOUT ME</h2>
 
@@ -48,7 +67,8 @@
             <div class="color-box" id="homeColor-box"></div>
 
             <div class="icons">
-                <a href="#"><img class="icon" src="assets/images/linkedin.png" alt=""></a>
+                <a href="https://www.linkedin.com/in/samuel-ara%C3%BAjo-1b5076194/"><img class="icon"
+                        src="assets/images/linkedin.png" alt=""></a>
                 <a href="#"><img class="icon" src="assets/images/instagram.png" alt=""></a>
                 <a href="#"><img class="icon" src="assets/images/whatsapp.png" alt=""></a>
             </div>
@@ -85,18 +105,51 @@
                 entre em contato. Estou ansioso para contribuir e aprender neste emocionante campo da computação.
                 <br>
                 <br>Location: Belo Horizonte, MG, Brazil.
-                <br>Site: www.aindanaotenhoum.com.br
+                <br>Site: <a href="http://x99oly.github.io/MyHomePage"
+                    target="_blank">http://x99oly.github.io/MyHomePage</a>
 
             </p>
         </div>
 
-        <div class="Liberar um commit do git pq não sei quebrar linha no bash"></div>
+        <!-- Projects -->
+
+        <div class="container" id="chessGame">
+
+            <h2 id="projetos-text">Projetos:</h2>
+
+            <div class="container" id="chess-img-tittle">
+
+                <h1 id="chess-text">CHESS</h1>
+                <div class="container-text">
+                    <h1 id="game-text">GAME</h1>
+                </div>
+
+                <img src="assets/images/Chess-amico black.png" alt="" class="proj_img" id="chessGame-img">
+            </div>
+
+            <div class="container" id="resume-chessGame">
+
+                <p id="text">
+                    Explore a emoção do xadrez em um ambiente virtual com nosso jogo de xadrez online desenvolvido em
+                    Unity e C#. Nossa abordagem utiliza Programação Orientada a Objetos para criar uma experiência
+                    interativa e envolvente. Desafie seus amigos ou jogue contra o computador enquanto você aprimora
+                    suas habilidades estratégicas neste projeto acadêmico inovador. Entre no mundo do xadrez digital e
+                    mergulhe em partidas emocionantes onde a estratégia e a mente afiada são as chaves para a vitória.
+                    Descubra o poder da POO aplicada ao desenvolvimento de jogos com nossa criação única de xadrez
+                    online.
+                    <br><br>
+                </p>
+
+                <a href="assets/reposity.html">ver mais</a>
+            </div>
+        </div>
+
     </main>
 
     <div class="menu">
-        <a href="#"><button>Home</button></a>
-        <a href="#"><button>Projects</button></a>
-        <a href="#"><button>My Github</button></a>
+        <a href="\"><button>Home</button></a>
+        <a href="#chessGame"><button>Projects</button></a>
+        <a href="https://github.com/settings/profile" target="_blank"><button>My Github</button></a>
     </div>
 
 </body>
