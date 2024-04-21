@@ -5,27 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-<!-- FONTES-->
+    <!-- FONTES-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
     <title>oringinal</title>
 
     <style>
-        .teste {
-            background-color: #fff;
-            padding: 10%;
-            width: 70vw;
-            height: 30px;
-            margin: 2px;
-        }
-
         :root {
             --darkBlue: #003049;
             --red: #d62828;
@@ -33,124 +26,141 @@
             --black: #000;
             --white: #fff;
         }
+
+        .teste {
+            display: none;
+            width: 80vw;
+            position: absolute;
+            top: 20vh;
+            height: 200px;
+        }
+
+        /*" 
+        RE-REFATORAÇÃO DO PROJETO:
+        1 - Construção de classes básicas para padronização (.container ; .btn ; .image ; .logo ; .tittle ; .text ; .link);
+        2 - Organização para legibilidade futura (Campos: About me, Projects...);
+        3 - Uso de boas práticas (nomes claros e padronizados (id = class + para que serve [campo] /container-projetos), redução do número de linhas...);
+        4 - Organização do arquivos;
+        5 - "semantização" do projeto (troca de div por tags semânticas)
+        "
+        */
+
+
+
+
+
+        /* APAGAR ACIMA */
+        
     </style>
 </head>
 
 <body>
     <header>
         <h1 class="mobile" id="mobile-h1">
-            <a href="#">
-                Samuel Araujo
+            <a class="link" href="http://x99oly.github.io/MyHomePage" target="_blank">
+                Samuel Araujo.com
             </a>
         </h1>
 
-        <div class="pc-header">
+        <nav class="pc-header">
 
-            <a id="logo-button" href="#"><button>Samuel Araujo</button></a>
+            <a class="link" id="logo-button" href="#"><button class="btn">Samuel Araujo</button></a>
 
 
-            <div class="pc-menu">
-                <a href="#"><button>Home</button></a>
-                <a href="#chessGame"><button>Projects</button></a>
-                <a href="https://github.com/" target="_blank"><button>My Github</button></a>
-            </div>
-        </div>
+            <nav class="pc-menu">
+                <a class="link" href="#home"><button class="btn">Home</button></a>
+                <a class="link" href="#chessGame"><button class="btn">Projects</button></a>
+                <a class="link" href="https://github.com/settings/profile" target="_blank"><button class="btn">My
+                        Github</button></a>
+            </nav>
+
+
+        </nav>
     </header>
 
     <main>
+
+
         <!-- About me-->
         <div class="container" id="home">
-            <h2>ABOUT ME</h2>
+            <h2 class="">ABOUT ME</h2>
 
-            <img id="img-perfil" src="assets/images/Skipping rope-bro orange.png" alt="">
+            <img class="image" id="img-perfil" src="assets/images/Skipping rope-bro orange.png" alt="">
 
             <div class="color-box" id="homeColor-box"></div>
 
             <div class="icons">
-                <a href="https://www.linkedin.com/in/samuel-ara%C3%BAjo-1b5076194/"><img class="icon"
-                        src="assets/images/linkedin.png" alt=""></a>
-                <a href="#"><img class="icon" src="assets/images/instagram.png" alt=""></a>
-                <a href="#"><img class="icon" src="assets/images/whatsapp.png" alt=""></a>
+                <a class="link" href="https://www.linkedin.com/in/samuel-ara%C3%BAjo-1b5076194/"><img class="icon"
+                        src="assets/images/logos/linkedin.png" alt=""></a>
+                <a class="link" href="#"><img class="icon" src="assets/images/logos/instagram.png" alt=""></a>
+                <a class="link" href="#"><img class="icon" src="assets/images/logos/whatsapp.png" alt=""></a>
             </div>
 
+            <div class="subContainer" id="subContainer-resume">
+                <p class="text" id="text-resume">
+                    <br>Um entusiasta de 25 anos apaixonado por resolver problemas e explorar o mundo
+                    da tecnologia. Cursando o primeiro período do curso de Sistemas de Informação na PUC Minas,
+                    imergindo nas
+                    bases sólidas da computação. Com uma habilidade natural para comunicação e aficionado em enfrentar
+                    desafios e em amplicar minhas capacidades.
+                    <br>Meu objetivo é construir uma carreira sólida em desenvolvimento back-end, com foco em
+                    tecnologias de cloud server, aplicando minha paixão pela resolução de problemas e pela criação de
+                    soluções inovadoras. Se você procura alguém determinado, apaixonado por tecnologia e pronto para
+                    superar desafios, estou ansioso para contribuir e aprender neste campo emocionante da
+                    computação.<br>
+                    <br>Location: Belo Horizonte, MG, Brazil.
+                </p>
+            </div>
         </div>
 
-        <div class="container" id="resume">
-            <h3>Samuel A. De Oliveira</h3>
-            <p>
-                Olá! Sou Samuel, um entusiasta de 25 anos apaixonado por resolver problemas e explorar o mundo da
-                tecnologia. Atualmente, estou no primeiro período do curso de Sistemas de Informação na PUC Minas, onde
-                estou mergulhando nas bases sólidas da computação.
-
-                <br>Tenho uma habilidade natural para comunicação, o que me permite expressar minhas ideias com clareza
-                e
-                trabalhar de forma eficaz em equipe. Enquanto adoro resolver problemas, sou movido pelo desafio de me
-                superar em áreas que ainda não domino completamente.
-
-                <br>Embora não tenha experiência profissional, minha jornada acadêmica já inclui conquistas
-                significativas.
-                Desenvolvi um jogo no estilo shoot'em up e atualmente estou trabalhando em um jogo de xadrez online,
-                além de um site para simulação de vendas online usando CRUD e SQL Server, juntamente com tecnologias
-                front-end como HTML, CSS e JavaScript.
-
-                <br>Sou conhecido por minha dedicação em mergulhar em problemas até encontrarem solução, muitas vezes
-                perdendo a noção do tempo até o despertador me lembrar que já é dia seguinte.
-
-                <br>Meu objetivo é construir uma carreira sólida em desenvolvimento back-end, com foco em tecnologias de
-                cloud server, onde posso continuar a explorar meu amor pela resolução de problemas e pela criação de
-                soluções inovadoras.
-
-                <br>Se você está buscando alguém determinado, apaixonado por tecnologia e pronto para enfrentar
-                desafios,
-                entre em contato. Estou ansioso para contribuir e aprender neste emocionante campo da computação.
-                <br>
-                <br>Location: Belo Horizonte, MG, Brazil.
-                <br>Site: <a href="http://x99oly.github.io/MyHomePage"
-                    target="_blank">http://x99oly.github.io/MyHomePage</a>
-
-            </p>
-        </div>
 
         <!-- Projects -->
 
-        <div class="container" id="chessGame">
-
+        <div class="container" id="container-projetos">
             <h2 id="projetos-text">Projetos:</h2>
 
-            <div class="container" id="chess-img-tittle">
+            <div class="subContainer" id="ChessGame">
 
-                <h1 id="chess-text">CHESS</h1>
-                <div class="container-text">
-                    <h1 id="game-text">GAME</h1>
+                <div class="subContainer" id="subContainer-chessGameTumbnail">
+
+                    <h3 id="chess-text">CHESS</h3>
+                    <h3 id="game-text">GAME</h3>
+                    <img class="image" id="chessGame-img" src="assets/images/Chess-amico black.png" alt="" class="proj_img">
+    
                 </div>
+    
+                <div class="subContainer" id="subContainer-chessGameTexto">
+    
+                    <p class="text">
+                        <br><br>
+                        Explore a emoção do xadrez em um ambiente virtual com nosso jogo de xadrez online desenvolvido
+                        em
+                        Unity e C#. Nossa abordagem utiliza Programação Orientada a Objetos para criar uma experiência
+                        interativa e envolvente. Desafie seus amigos ou jogue contra o computador enquanto você aprimora
+                        suas habilidades estratégicas neste projeto acadêmico inovador. Entre no mundo do xadrez digital
+                        e
+                        mergulhe em partidas emocionantes onde a estratégia e a mente afiada são as chaves para a
+                        vitória.
+                        Descubra o poder da POO aplicada ao desenvolvimento de jogos com nossa criação única de xadrez
+                        online.
+                    </p>
 
-                <img src="assets/images/Chess-amico black.png" alt="" class="proj_img" id="chessGame-img">
+                </div>
+                <a class="link" href="assets/reposity.html"><button class="btn" id="btn-more">Saiba mais</button></a>
+
             </div>
 
-            <div class="container" id="resume-chessGame">
 
-                <p id="text">
-                    Explore a emoção do xadrez em um ambiente virtual com nosso jogo de xadrez online desenvolvido em
-                    Unity e C#. Nossa abordagem utiliza Programação Orientada a Objetos para criar uma experiência
-                    interativa e envolvente. Desafie seus amigos ou jogue contra o computador enquanto você aprimora
-                    suas habilidades estratégicas neste projeto acadêmico inovador. Entre no mundo do xadrez digital e
-                    mergulhe em partidas emocionantes onde a estratégia e a mente afiada são as chaves para a vitória.
-                    Descubra o poder da POO aplicada ao desenvolvimento de jogos com nossa criação única de xadrez
-                    online.
-                    <br><br>
-                </p>
-
-                <a href="assets/reposity.html">ver mais</a>
-            </div>
         </div>
 
     </main>
 
-    <div class="menu">
-        <a href="\"><button>Home</button></a>
-        <a href="#chessGame"><button>Projects</button></a>
-        <a href="https://github.com/settings/profile" target="_blank"><button>My Github</button></a>
-    </div>
+    <nav class="menu">
+        <a class="link" href="#home"><button class="btn">Home</button></a>
+        <a class="link" href="#chessGame"><button class="btn">Projects</button></a>
+        <a class="link" href="https://github.com/settings/profile" target="_blank"><button class="btn">My
+                Github</button></a>
+    </nav>
 
 </body>
 
