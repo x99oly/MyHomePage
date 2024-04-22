@@ -30,14 +30,12 @@
             --black: #000;
             --white: #fff;
         }
+
         /*
         " 
-        1 - Adicionado campo dos projetos Shoot'em up e Reserva de lanches
-        2 - Adicionada fonte Jersey-10-regular
-        3 - Consertado o problema do menu inferior que parte das palavras ficavam para fora em telas mais finas
+        
         "
         */
-    
     </style>
 </head>
 
@@ -124,15 +122,20 @@
 
 
                     <p class="text">
-                        Explore a emoção do xadrez em um ambiente virtual com nosso jogo de xadrez online desenvolvido
+                        Explore a emoção do xadrez em um ambiente virtual com nosso jogo de xadrez online
+                        desenvolvido
                         em
-                        Unity e C#. Nossa abordagem utiliza Programação Orientada a Objetos para criar uma experiência
-                        interativa e envolvente. Desafie seus amigos ou jogue contra o computador enquanto você aprimora
-                        suas habilidades estratégicas neste projeto acadêmico inovador. Entre no mundo do xadrez digital
+                        Unity e C#. Nossa abordagem utiliza Programação Orientada a Objetos para criar uma
+                        experiência
+                        interativa e envolvente. Desafie seus amigos ou jogue contra o computador enquanto você
+                        aprimora
+                        suas habilidades estratégicas neste projeto acadêmico inovador. Entre no mundo do xadrez
+                        digital
                         e
                         mergulhe em partidas emocionantes onde a estratégia e a mente afiada são as chaves para a
                         vitória.
-                        Descubra o poder da POO aplicada ao desenvolvimento de jogos com nossa criação única de xadrez
+                        Descubra o poder da POO aplicada ao desenvolvimento de jogos com nossa criação única de
+                        xadrez
                         online.
                     </p>
 
@@ -141,7 +144,8 @@
                         <img class="logo" id="unity-logo" src="assets/images/logos/unity_logo.png" alt="">
                     </div>
                 </div>
-                <a class="link" href="assets/reposity.html"><button class="btn" id="btn-more">Saiba mais</button></a>
+
+
 
             </div>
 
@@ -164,9 +168,12 @@
                     <p class="text">
                         <br>
                         Desfrute da emoção de um clássico jogo de nave estilo shoot'em up em nossa criação feita na
-                        Unity. Pilote sua nave através de cenários desafiadores, enfrentando ondas de inimigos e chefes
-                        épicos. Personalize sua nave com upgrades e armas poderosas para se tornar o mestre do espaço.
-                        Aventure-se sozinho ou desafie seus amigos em batalhas multiplayer frenéticas. Prepare-se para
+                        Unity. Pilote sua nave através de cenários desafiadores, enfrentando ondas de inimigos e
+                        chefes
+                        épicos. Personalize sua nave com upgrades e armas poderosas para se tornar o mestre do
+                        espaço.
+                        Aventure-se sozinho ou desafie seus amigos em batalhas multiplayer frenéticas. Prepare-se
+                        para
                         uma experiência cheia de ação e diversão neste jogo de nave desenvolvido com paixão e
                         criatividade.
                     </p>
@@ -176,7 +183,7 @@
                         <img class="logo" id="unity-logo" src="assets/images/logos/unity_logo.png" alt="">
                     </div>
                 </div>
-                <a class="link" href="#"><button class="btn" id="btn-more-shootEmup">Saiba mais</button></a>
+
 
             </div>
 
@@ -196,10 +203,12 @@
 
                     <p class="text">
                         <br>
-                        Reserve seus lanches favoritos de forma rápida e fácil em nosso site responsivo! Desfrute de uma
+                        Reserve seus lanches favoritos de forma rápida e fácil em nosso site responsivo! Desfrute de
+                        uma
                         variedade de opções deliciosas, desde sanduíches frescos até sobremesas irresistíveis.
 
-                        Navegue pelo nosso menu diversificado e faça sua reserva em poucos cliques, seja no computador,
+                        Navegue pelo nosso menu diversificado e faça sua reserva em poucos cliques, seja no
+                        computador,
                         tablet ou smartphone. Experimente a conveniência de reservar lanches com praticidade e
                         simplicidade!
                     </p>
@@ -210,10 +219,19 @@
                         <img class="logo" src="assets/images/logos/script-java.png" alt="">
                     </div>
                 </div>
-                <a class="link" href="#"><button class="btn" id="btn-more-reservaDeLanches">Saiba mais</button></a>
-
             </div>
+
+
+            <div class="radio-div">
+                <button class="btn" id="previous" onclick="showNextProject()">&lt;</button>
+
+                <a class="link" href="#"><button class="btn" id="btn-more-shootEmup">Saiba mais</button></a>
+
+                <button class="btn" id="next" onclick="showNextProject()">&gt;</button>
+            </div>
+            
         </div>
+
 
     </main>
 
@@ -224,6 +242,39 @@
                 Github</button></a>
     </nav>
 
+
+    <script>
+        function showNextProject() {
+            var shootElement = document.getElementById('ShootEmUp');
+            var chessElement = document.getElementById('ChessGame');
+            var resElement = document.getElementById('ReservaDeLanches');
+
+            var element = [shootElement, chessElement, resElement];
+            var currentIndex = -1;
+
+            // Encontra o índice do elemento visível (com display !== 'none')
+            for (var i = 0; i < element.length; i++) {
+                var estilo = window.getComputedStyle(element[i]);
+                if (estilo.display !== 'none') {
+                    currentIndex = i;
+                    break; // Sai do loop assim que encontrar o elemento visível
+                }
+            }
+
+            if (currentIndex !== -1) {
+
+                element[currentIndex].style.display = 'none';
+
+                // Calcula o próximo índice para exibir o próximo elemento
+                var nextIndex = (currentIndex + 1) % element.length;
+
+                element[nextIndex].style.display = 'block';
+            }
+        }
+
+
+
+    </script>
 </body>
 
 </html>

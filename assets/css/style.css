@@ -50,6 +50,7 @@
 body {
     background-color: var(--darkBlue);
     overflow-x: hidden;
+
 }
 
 main {
@@ -140,7 +141,7 @@ header {
     position: fixed;
     background-color: var(--darkBlue);
     width: 101vw;
-    height: 10vw;
+    height: 10svw;
     display: flex;
     align-items: center;
     justify-content: left;
@@ -198,8 +199,8 @@ ABOUT ME - CAMPO
 #home {
     height: 450px;
     min-height: 300px;
-    top: 6vh;
-    margin-bottom: 10vh;
+    top: 6svh;
+    margin-bottom: 10svh;
 }
 
 #img-perfil {
@@ -220,7 +221,7 @@ ABOUT ME - CAMPO
     line-height: 0.8;
 }
 
-.color-box {
+#home .color-box {
     position: absolute;
     background: var(--orange);
     width: 65%;
@@ -241,11 +242,10 @@ ABOUT ME - CAMPO
     justify-content: center;
     flex-direction: row;
     width: 30vw;
-    height: 5vh;
     justify-content: space-between;
 }
 
-.icons img {
+#home .icons img {
     width: 8vw;
     min-width: 30px;
     max-width: 50px;
@@ -266,13 +266,11 @@ ABOUT ME - CAMPO
 /*
  PROJETOS - CAMPO
 */
-
 #container-projetos {
-    display: flex;
     flex-direction: column;
     align-items: center;
-    height: 200%;
-    max-height: 2000px;
+    height: 650px;
+    max-height: 700px;
 }
 
 #container-projetos .subContainer {
@@ -281,9 +279,31 @@ ABOUT ME - CAMPO
     padding: 2% 2%;
 }
 
+
+/*---- SLIDER -----*/
+
+/* BUTTON */
+
+#container-buttons .btn{
+    justify-content: space-between;
+    margin: 5px 2%;
+}
+
+#container-buttons {
+    margin-bottom: 15svh;
+}
+#btn-more {
+    width: 85px;
+    height: 45px;
+    left: 37%;
+    top: 100%;
+}
+
+
 /* ----- ChessGame -------*/
 #ChessGame {
-    margin-bottom: 7vh;
+    margin-bottom: 2svh;
+    height: 470px;
 }
 
 /*Tumbnail*/
@@ -331,18 +351,15 @@ ABOUT ME - CAMPO
     top: 5%;
 }
 
-/* BUTTON */
-#btn-more {
-    position: absolute;
-    left: 37%;
-    top: 100%;
-}
 
 /* 
 SHOOT'EM UP
 */
 #ShootEmUp {
-    margin-bottom: 7vh;
+    display: none;
+    margin-bottom: 2svh;
+    height: 470px;
+
 }
 
 /*Tumbnail*/
@@ -385,18 +402,15 @@ SHOOT'EM UP
     top: 1%;
 }
 
-/* BUTTON */
-#btn-more-shootEmup {
-    position: absolute;
-    left: 37%;
-    top: 100%;
-}
 
 /* 
 RESERVA DE LANCHES
 */
 #ReservaDeLanches {
-    margin-bottom: 15vh;
+    display: none;
+    margin-bottom: 2svh;
+    height: 470px;
+
 }
 
 /*Tumbnail*/
@@ -445,12 +459,8 @@ RESERVA DE LANCHES
     top: 1%;
 }
 
-/* BUTTON */
-#btn-more-reservaDeLanches {
-    position: absolute;
-    left: 37%;
-    top: 100%;
-}
+
+
 
 
 /* ------ Tablets / vertical --------*/
@@ -466,23 +476,23 @@ RESERVA DE LANCHES
     }
 
     .icons {
-        top: 25vh;
+        top: 25;
     }
 
     #home h2 {
-        top: 2vh;
+        top: 2;
     }
 
     #home #img-perfil {
-        top: 5vh;
+        top: 5;
     }
 
     #home .color-box {
-        top: 10vh;
+        top: 10;
     }
 
     #resume {
-        top: 5vh;
+        top: 5;
         margin: none;
     }
 
@@ -506,7 +516,7 @@ RESERVA DE LANCHES
     }
 
     header {
-        height: 8vh;
+        height: 8;
     }
 
     .pc-header {
@@ -561,7 +571,7 @@ RESERVA DE LANCHES
 
     #home #img-perfil {
         top: 0vw;
-        left: 0vh;
+        left: 0;
     }
 
     #home h2 {
@@ -577,7 +587,7 @@ RESERVA DE LANCHES
     }
 
     .icons {
-        top: 60vh;
+        top: 60;
         left: 8%;
         width: 1%;
         min-width: 220px;
@@ -587,7 +597,7 @@ RESERVA DE LANCHES
 
     #resume {
         position: absolute;
-        top: 30vh;
+        top: 30;
         margin: none;
         width: 700px;
         right: 11%;
@@ -596,13 +606,13 @@ RESERVA DE LANCHES
     #resume p {
         font-size: 18px;
         position: absolute;
-        top: 4vh;
+        top: 4;
     }
 
     #resume h3 {
         position: absolute;
         right: 0%;
-        top: 0vh;
+        top: 0;
         font-weight: bold;
     }
 
