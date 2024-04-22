@@ -16,6 +16,10 @@
         href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+
     <title>oringinal</title>
 
     <style>
@@ -26,31 +30,14 @@
             --black: #000;
             --white: #fff;
         }
-
-        .teste {
-            display: none;
-            width: 80vw;
-            position: absolute;
-            top: 20vh;
-            height: 200px;
-        }
-
-        /*" 
-        RE-REFATORAÇÃO DO PROJETO:
-        1 - Construção de classes básicas para padronização (.container ; .btn ; .image ; .logo ; .tittle ; .text ; .link);
-        2 - Organização para legibilidade futura (Campos: About me, Projects...);
-        3 - Uso de boas práticas (nomes claros e padronizados (id = class + para que serve [campo] /container-projetos), redução do número de linhas...);
-        4 - Organização do arquivos;
-        5 - "semantização" do projeto (troca de div por tags semânticas)
+        /*
+        " 
+        1 - Adicionado campo dos projetos Shoot'em up e Reserva de lanches
+        2 - Adicionada fonte Jersey-10-regular
+        3 - Consertado o problema do menu inferior que parte das palavras ficavam para fora em telas mais finas
         "
         */
-
-
-
-
-
-        /* APAGAR ACIMA */
-        
+    
     </style>
 </head>
 
@@ -117,7 +104,9 @@
         <!-- Projects -->
 
         <div class="container" id="container-projetos">
-            <h2 id="projetos-text">Projetos:</h2>
+            <h2 class="tittle" id="projetos-text">Projetos</h2>
+
+            <!-- JOGO DE XADREZ-->
 
             <div class="subContainer" id="ChessGame">
 
@@ -125,14 +114,16 @@
 
                     <h3 id="chess-text">CHESS</h3>
                     <h3 id="game-text">GAME</h3>
-                    <img class="image" id="chessGame-img" src="assets/images/Chess-amico black.png" alt="" class="proj_img">
-    
+                    <img class="image" id="chessGame-img" src="assets/images/Chess-amico black.png" alt=""
+                        class="proj_img">
+
                 </div>
-    
+
                 <div class="subContainer" id="subContainer-chessGameTexto">
-    
+
+
+
                     <p class="text">
-                        <br><br>
                         Explore a emoção do xadrez em um ambiente virtual com nosso jogo de xadrez online desenvolvido
                         em
                         Unity e C#. Nossa abordagem utiliza Programação Orientada a Objetos para criar uma experiência
@@ -145,12 +136,83 @@
                         online.
                     </p>
 
+                    <div class="subContainer" id="subContainer-logosTec">
+                        <img class="logo" src="assets/images/logos/c_sharp_logo.png" alt="">
+                        <img class="logo" id="unity-logo" src="assets/images/logos/unity_logo.png" alt="">
+                    </div>
                 </div>
                 <a class="link" href="assets/reposity.html"><button class="btn" id="btn-more">Saiba mais</button></a>
 
             </div>
 
+            <!-- SHOOT'EM UP GAME-->
 
+            <div class="subContainer" id="ShootEmUp">
+
+                <div class="subContainer" id="subContainer-shootEmUpTumbnail">
+
+                    <h3 id="shootEm-text">SHOOT'M UP!</h3>
+                    <img class="image" id="shootEmUpGame-img" src="assets/images/Gaming-amico blue.png" alt=""
+                        class="proj_img">
+
+                </div>
+
+                <div class="subContainer" id="subContainer-shootEmUpTexto">
+
+
+
+                    <p class="text">
+                        <br>
+                        Desfrute da emoção de um clássico jogo de nave estilo shoot'em up em nossa criação feita na
+                        Unity. Pilote sua nave através de cenários desafiadores, enfrentando ondas de inimigos e chefes
+                        épicos. Personalize sua nave com upgrades e armas poderosas para se tornar o mestre do espaço.
+                        Aventure-se sozinho ou desafie seus amigos em batalhas multiplayer frenéticas. Prepare-se para
+                        uma experiência cheia de ação e diversão neste jogo de nave desenvolvido com paixão e
+                        criatividade.
+                    </p>
+
+                    <div class="subContainer" id="subContainer-logosTec-shootEmup">
+                        <img class="logo" src="assets/images/logos/c_sharp_logo.png" alt="">
+                        <img class="logo" id="unity-logo" src="assets/images/logos/unity_logo.png" alt="">
+                    </div>
+                </div>
+                <a class="link" href="#"><button class="btn" id="btn-more-shootEmup">Saiba mais</button></a>
+
+            </div>
+
+            <!-- RESERVA DE LANCHES-->
+
+            <div class="subContainer" id="ReservaDeLanches">
+
+                <div class="subContainer" id="subContainer-reservaDeLanchesTumbnail">
+
+                    <h3 id="reservaDeLanches-text">RESERVA<br> DE<br> LANCHES</h3>
+                    <img class="image" id="reservaDeLanches-img" src="assets/images/Deconstructed food-bro blue.png"
+                        alt="" class="proj_img">
+
+                </div>
+
+                <div class="subContainer" id="subContainer-reservaDeLanchesTexto">
+
+                    <p class="text">
+                        <br>
+                        Reserve seus lanches favoritos de forma rápida e fácil em nosso site responsivo! Desfrute de uma
+                        variedade de opções deliciosas, desde sanduíches frescos até sobremesas irresistíveis.
+
+                        Navegue pelo nosso menu diversificado e faça sua reserva em poucos cliques, seja no computador,
+                        tablet ou smartphone. Experimente a conveniência de reservar lanches com praticidade e
+                        simplicidade!
+                    </p>
+
+                    <div class="subContainer" id="subContainer-logosTec-reservaDeLanches">
+                        <img class="logo" src="assets/images/logos/html.png" alt="">
+                        <img class="logo" src="assets/images/logos/css-3.png" alt="">
+                        <img class="logo" src="assets/images/logos/script-java.png" alt="">
+                    </div>
+                </div>
+                <a class="link" href="#"><button class="btn" id="btn-more-reservaDeLanches">Saiba mais</button></a>
+
+            </div>
         </div>
 
     </main>

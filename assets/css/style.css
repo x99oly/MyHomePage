@@ -16,6 +16,13 @@
     font-style: normal;
 }
 
+
+.jersey-10-regular {
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 /*DEFINIÇÕES GLOBAIS / VARs */
 *,
 *::before,
@@ -65,7 +72,7 @@ PRÉ-DEFINIÇÕES DE CLASSES:
     max-width: 700px;
     height: auto;
     display: flex;
-    align-items: center;    
+    align-items: center;
 }
 
 .btn {
@@ -89,15 +96,19 @@ PRÉ-DEFINIÇÕES DE CLASSES:
     height: auto;
 }
 
-.logo{
+.logo {
     width: 20px;
     height: auto;
 }
 
-.tittle{
+#unity-logo {
+    width: 50px;
+}
+
+.tittle {
     font-family: "Anton", sans-serif;
     letter-spacing: 2px;
-    font-size: clamp(30px, 4vw, 100px);
+    font-size: clamp(20px, 4vw, 50px);
 }
 
 .text {
@@ -164,8 +175,8 @@ MENU FLUTUANTE - MOBILE VERSIONS
     background-color: var(--black);
     display: flex;
     align-items: center;
-    width: 80vw;
-    height: 7vh;
+    width: 80%;
+    height: 5%;
     justify-content: space-between;
     border-radius: 5px;
     left: 10%;
@@ -174,8 +185,6 @@ MENU FLUTUANTE - MOBILE VERSIONS
 }
 
 .menu button {
-    width: 100px;
-    height: 20px;
     border: none;
     color: var(--white);
     background-color: transparent;
@@ -243,7 +252,7 @@ ABOUT ME - CAMPO
     height: auto;
 }
 
-#text-resume{
+#text-resume {
     font-weight: 500;
 
 }
@@ -258,56 +267,190 @@ ABOUT ME - CAMPO
  PROJETOS - CAMPO
 */
 
-/* ----- ChessGame -------*/
-
 #container-projetos {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    height: 450px;
-    margin-bottom: 10vh;
+    height: 200%;
+    max-height: 2000px;
 }
 
 #container-projetos .subContainer {
+    position: relative;
     width: 100%;
     padding: 2% 2%;
 }
 
- /*Tumbnail*/
-#subContainer-chessGameTumbnail{
+/* ----- ChessGame -------*/
+#ChessGame {
+    margin-bottom: 7vh;
+}
+
+/*Tumbnail*/
+#subContainer-chessGameTumbnail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
     position: relative;
 }
+
 #subContainer-chessGameTumbnail h3 {
-    width: 100%;
+    width: 60%;
     position: absolute;
     font-size: 320%;
 }
+
 #chess-text {
+    top: 4%;
     left: 15%;
 }
-#game-text {
+
+#subContainer-chessGameTumbnail #game-text {
     transform: rotate(90deg);
-    left: 26%;
-    top: 1100%;
+    left: 46%;
+    top: 40%;
 }
+
 #subContainer-chessGameTumbnail img {
     position: absolute;
-    top: 250%;
-    left: 10%;
+    top: 25%;
+    left: 12%;
 }
 
 /* DESCRIPTION */
-#subContainer-chessGameTexto{
-    position: absolute;
-    left: 0%;
-    top: 40%;
-}
-/* BUTTON */
-#btn-more{
-    position: absolute;
-    left: 37%;
-    top: 90%;
+#subContainer-logosTec {
+    display: flex;
+    align-items: center;
 }
 
+#subContainer-chessGameTexto {
+    position: absolute;
+    left: 0%;
+    top: 5%;
+}
+
+/* BUTTON */
+#btn-more {
+    position: absolute;
+    left: 37%;
+    top: 100%;
+}
+
+/* 
+SHOOT'EM UP
+*/
+#ShootEmUp {
+    margin-bottom: 7vh;
+}
+
+/*Tumbnail*/
+#subContainer-shootEmUpTumbnail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+
+#subContainer-shootEmUpTumbnail h3 {
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    width: 100%;
+    font-size: 470%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 2;
+}
+
+#subContainer-shootEmUpTumbnail img {
+    position: absolute;
+    top: 3%;
+    left: 13%;
+}
+
+
+/* DESCRIPTION */
+#subContainer-logosTec-shootEmup {
+    display: flex;
+    align-items: center;
+}
+
+#subContainer-shootEmUpTexto {
+    position: absolute;
+    left: 0%;
+    top: 1%;
+}
+
+/* BUTTON */
+#btn-more-shootEmup {
+    position: absolute;
+    left: 37%;
+    top: 100%;
+}
+
+/* 
+RESERVA DE LANCHES
+*/
+#ReservaDeLanches {
+    margin-bottom: 15vh;
+}
+
+/*Tumbnail*/
+#subContainer-reservaDeLanchesTumbnail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+
+
+
+#subContainer-reservaDeLanchesTumbnail h3 {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    width: 100%;
+    font-size: 250%;
+    position: absolute;
+    top: 2%;
+    left: 10%;
+    z-index: 2;
+
+    -webkit-text-stroke: 1px black; 
+    -webkit-text-fill-color: var(--white);
+}
+
+#subContainer-reservaDeLanches img {
+    position: absolute;
+    top: 3%;
+    left: 13%;
+}
+
+
+/* DESCRIPTION */
+#subContainer-logosTec-reservaDeLanches {
+    display: flex;
+    align-items: center;
+}
+
+
+#subContainer-reservaDeLanchesTexto {
+    position: absolute;
+    left: 0%;
+    top: 1%;
+}
+
+/* BUTTON */
+#btn-more-reservaDeLanches {
+    position: absolute;
+    left: 37%;
+    top: 100%;
+}
 
 
 /* ------ Tablets / vertical --------*/
@@ -389,7 +532,7 @@ ABOUT ME - CAMPO
         background-color: transparent;
         cursor: pointer;
     }
-  
+
     .pc-header #logo-button {
         position: absolute;
         left: 2%;
