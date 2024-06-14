@@ -6,7 +6,7 @@
 }
 
 :root {
-    --main: #a01d1d;
+    --main: #a24949;
     --background: #fbfbfb;
     --contrast: #10380d;
     --black: #000;
@@ -64,6 +64,13 @@ a:hover{
     }
 }
 
+.btn{
+    border: none;
+    width: auto;
+    height: auto;
+    background-color: var(--contrast);
+    color: var(--white);
+}
 .btn-no-format:focus {
     outLine: none;
     box-shadow: none;
@@ -140,7 +147,7 @@ a:hover{
     margin-bottom: 2%;
 }
 
-/* CARDS REPOSITÓRIOS */
+/* CARDS Projetos */
 
 .card-grid {
     display: grid;
@@ -151,18 +158,20 @@ a:hover{
 .card {
     position: relative;
     width: 100%;
-    height: 320px;
+    min-height: 400px;
+    height: 120%;
     overflow: hidden;
     border-radius: 5px;
+    gap: 5px;
     background-color: transparent;
     border: none;
 }
 
 .card-img {
     width: 90%;
-    height: 100%;
+    height: 180%;
     overflow: hidden;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .card-img img {
@@ -174,9 +183,9 @@ a:hover{
 .card h2 {
     z-index: 2000;
     position: absolute;
-    color: wheat;
+    color: var(--white);
     bottom: 5%;
-    left: 35%;
+    left: 30%;
 }
 
  /* Esconde a grid de cards em telas pequenas */
@@ -184,13 +193,34 @@ a:hover{
     .card-grid {
         display: none;
     }
+
+    .carousel .card {
+        overflow: visible;
+        height: auto;
+        flex-direction: column;
+        margin-bottom: 15%;
+    }
+
+    .carousel .card-img {
+        height: auto;
+    }
+
+    .carousel .card p {
+        font-size: clamp(14px, .7rem, 24px);
+        text-align: justify;
+        padding: 10px;
+    }
+
 }
 
 /* Mostra o carrossel em telas pequenas */
-@media (min-width: 769px) {
-    .carousel {
-        display: none;
-    }
+@media (min-width: 768px) {
+
+   #cardCarousel{
+    display: none;
+   }
+
+
 }
 
 
