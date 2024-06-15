@@ -16,3 +16,24 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+window.addEventListener('resize', disableOnMobile);
+
+function disableOnMobile(){
+    let wSize = window.innerWidth;
+    let mobileNones = document.querySelectorAll('.mobile-none');
+
+    if (wSize <= 800){
+
+        mobileNones.forEach( item => {
+            item.classList.add('d-none');
+        });
+    }
+    else{
+        mobileNones.forEach( item => {
+            item.classList.remove('d-none');
+        });
+    }
+}
+
+disableOnMobile();
+
