@@ -16,8 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-window.addEventListener('resize', disableOnMobile);
-
 function disableOnMobile(){
     let wSize = window.innerWidth;
     let mobileNones = document.querySelectorAll('.mobile-none');
@@ -35,5 +33,12 @@ function disableOnMobile(){
     }
 }
 
+//  CHAMADAS DE FUNÇÕES
+
 disableOnMobile();
+
+//  EVENTLISTNERS 
+
+window.addEventListener('resize', disableOnMobile);
+
 
