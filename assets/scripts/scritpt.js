@@ -1,5 +1,3 @@
-const actPC = ["mouseenter", "mouseleave"];
-const actMob = ["touchstart", "touchend"];
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -7,9 +5,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let cardList = document.querySelectorAll('.card .card-children');
 
-    navHover(navMenuItems);
-    cardHover(cardList);
-    cardHandleHoveMobile(cardList);    
+    navHover(navMenuItems); //funciona!
+    cardHover(cardList); //funciona!
+    cardHandleHoveMobile(cardList); //Ta bugando faz 3h   
 
 });
 
@@ -49,14 +47,12 @@ function disableOnMobile(){
 
 function cardHover(cardList){
     cardList.forEach(function(card) {
-
-        act = actPC;
         
-        card.addEventListener(act[0], function () {
+        card.addEventListener("mouseenter", function () {
             card.style.top = '0';
         });
 
-        card.addEventListener(act[1], function () {
+        card.addEventListener("mouseleave", function () {
             card.style.top = '-100%';
         });
     });
