@@ -33,10 +33,10 @@
     </style>
 </head>
 
-<body>
-    <main style="overflow-x: hidden; width: 100vw; height: 100vh; position: relative;">
+<body style="overflow: hidden; width: 100vw; height: 100vh;">
+    <main style="position: relative; height: 100%; width: 100%;">
 
-        <div class="pages d-none"
+        <div id="page0" class="pages"
             style=" width: 100%; height: 100%; background-color: var(--neutro-2) ;display: grid; place-items: center;">
 
             <div class="content" style="color: white ;display: grid; place-items: center;">
@@ -78,68 +78,113 @@
 
         </div>
 
-        <div class="pages"
+
+<!--########################### FIM PÁGINA INICIAL #########################################-->
+
+
+        <div id="page1" class="pages grid-temp d-none"
             style="width: 100%; height: 100%; background-color: var(--neutro-2); display: grid; place-items: center;">
 
             <nav class="nav-page-two"
                 style=" position: absolute; bottom: 5%; display: flex; flex-direction: column; align-items: center;">
-                <div style="display: flex; flex-direction: row; gap: 15px;">
-                    <div class="btn-d">blog</div>
-                    <div class="btn-d">projetos</div>
-                    <div class="btn-d">contate-me</div>
-                </div>
+                <ul style="display: flex; flex-direction: row; gap: 15px;">
+                    <li class="btn-d">blog</li>
+                    <li class="btn-d">projetos</li>
+                    <li class="btn-d">contate-me</li>
+                </ul>
             </nav>
 
-            <div class="pages-main-content"
-                style="width: 100%; height: 100%; display: grid; grid-template-columns: auto auto; gap: 5px; position: relative; background-color: rgb(53, 53, 1);">
+            <div
+                style="width: 100%; height: 100%; display: grid; grid-template-columns: auto auto; gap: 5px; position: relative;">
+
+                <!-- Left side-->
+                <div id="left-side" class="pages-main-content"
+                    style="width: 45%; height: 80%; background-color: var(--blue); position: absolute; bottom: 5%; left: 2.5%;display: grid; align-items: center">
 
 
-                <div
-                    style="width: 45%; height: 80%; background-color: var(--blue); position: absolute; bottom: 5%; right: 2.5%;display: grid; align-items: center">
 
-                    <!--     CARDS START      -->
+                </div>
 
-                    <a href="#" onclick="changePosition(event);">
-                        <div class="card pointer">
+                <!-- Right side-->
+                <div id="right-side" class="pages-main-content"
+                    style="width: 45%; height: 80%; position: absolute; bottom: 5%; right: 2.5%; overflow: hidden; display: flex; flex-direction: column; align-items: center;">
 
-                            <div class="card-children pointer">
+                  
 
-                                <div class="card-img">
-                                    <img src="assets/images/rosequartz.jpg" style="width: 100%;" alt="">
-                                </div>
+                    <div
+                        style="position: relative; width: 100%; padding: 0; display:flex; flex-direction: row; gap: 20px; ">
 
-                                <div class="card-info">
-                                    <ul style="display: flex; flex-direction: row; gap: 10px;">
-                                        <li><img class="logo-img" src="assets/images/logos/c_sharp_logo.png"
-                                                style="width: 20px; height: auto;" alt=""></li>
-                                        <li><img class="logo-img" src="assets/images/logos/c_sharp_logo.png"
-                                                style="width: 20px; height: auto;" alt=""></li>
-                                    </ul>
-                                    <h4>Título</h4>
-                                    <br>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, hic voluptas.
-                                        Deserunt, unde
-                                        dolores, recusandae harum, eos vitae repudiandae fugiat pariatur optio tempora
-                                        vero? Fuga
-                                        dolores atque possimus rem illo.
-                                    </p>
+                        <!--     CARDS START      -->
+
+                        <a class="absolute-a" href="#" onclick="changePosition(event);" >
+                            <div class="card pointer">
+
+                                <div class="card-children pointer">
+
+                                    <div class="card-img" style="overflow: hidden; width: 100%; height: 100%;">
+                                        <img src="assets/images/rosequartz.jpg" style="width: 100%;" alt="">
+                                    </div>
+
+                                    <div class="card-info">
+                                        <ul style="display: flex; flex-direction: row; gap: 10px;">
+                                            <li><img class="logo-img" src="assets/images/logos/c_sharp_logo.png"
+                                                    style="width: 20px; height: auto;" alt=""></li>
+                                            <li><img class="logo-img" src="assets/images/logos/c_sharp_logo.png"
+                                                    style="width: 20px; height: auto;" alt=""></li>
+                                        </ul>
+                                        <h4>Título</h4>
+                                        <br>
+                                        <p style="font-size: clamp(12px, .8rem, 16px);">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, hic
+                                            voluptas.
+                                            Deserunt, unde
+                                            dolores, recusandae harum, eos vitae repudiandae fugiat pariatur optio
+                                            tempora
+                                            vero? Fuga
+                                            dolores atque possimus rem illo.
+                                        </p>
+                                        <h6>Colaboradores</h6>
+                                        <ul>
+                                            <li><img src="assets/images/me-perfil.jpg"
+                                                    style="width: 50px; height: auto; border-radius: 50%;" alt=""></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
 
-
-                    <!--  CARDS END   -->
-
+                        <!--  CARDS END   -->
+                    </div>
+                    <div style="margin: 80% /* 140% */ 50%; width: 100%; justify-content: space-between;">
+                        <button class="btn" style="background-color: var(--main);">sss</button>
+                        <button class="btn" style="background-color: var(--main);">aaa</button>
+                    </div>
                 </div>
 
             </div>
-        </div>
 
-
-        </div>
     </main>
+
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam quis officia, nobis optio fugit, temporibus
+        illum veniam hic distinctio nisi architecto! Ad molestiae natus aspernatur, aliquam voluptates quasi distinctio
+        ipsum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates error ipsum aspernatur earum
+        molestiae sit voluptas! Consequatur voluptates tempora, doloremque laborum id impedit similique maxime pariatur
+        libero placeat minima accusamus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet laborum eaque
+        dignissimos. Optio voluptates officiis enim, facere inventore excepturi quas libero, impedit cum unde culpa
+        eligendi, sint veritatis a sunt! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam tempore,
+        deserunt officia numquam fuga quaerat voluptatem recusandae aliquam, et sed laboriosam? Dolores earum, iusto
+        voluptate molestias dolorum in consectetur maxime! Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Impedit alias laboriosam doloremque maiores. Minima iusto, vero non sunt voluptate aliquid porro veritatis a
+        tenetur, praesentium temporibus, necessitatibus ad vel saepe! Lorem, ipsum dolor sit amet consectetur
+        adipisicing elit. Veniam deserunt facilis eum. Dignissimos aspernatur reprehenderit temporibus earum fuga eius
+        iste amet inventore cumque molestiae vitae voluptatibus mollitia dolor, adipisci repudiandae. Lorem ipsum dolor
+        sit amet consectetur, adipisicing elit. Explicabo magni dolore, nobis officiis odio recusandae doloremque ad
+        earum hic voluptates perspiciatis esse corrupti tenetur quae, alias porro ea, neque totam. Lorem ipsum dolor sit
+        amet consectetur adipisicing elit. Dolorum atque alias enim voluptatum vitae ipsa mollitia sit exercitationem in
+        sed ratione temporibus aliquid incidunt molestias dignissimos, rerum unde commodi doloribus.
+    </p>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -151,30 +196,7 @@
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-
-        });
-
-
-        function changePosition(event) {
-            event.preventDefault();
-
-            let cardChildren = event.currentTarget.querySelector('.card-children');
-
-            if (cardChildren.style.top === '-101%'){
-                cardChildren.style.top = '0';
-            }else{
-                cardChildren.style.top = '-101%';
-            }
-
-        }
-
-        document.addEventListener('DOMContentLoaded', function () {
-            // Adiciona classe para animação de fade-in
-            document.querySelector('.content').classList.add('loaded');
-        });
-    </script>
+    <script src="assets/scripts/home.js"></script>
 </body>
 
 </html>
