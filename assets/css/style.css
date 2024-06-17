@@ -1,169 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
 @font-face {
-    font-family: 'pesonal1';
+    font-family: 'Mustang';
     src: url(/assets/fontes/Black\ Mustang.ttf) format('truetype');
 }
+
 @font-face {
-    font-family: 'pesonal2';
-    src: url(/assets/fontes/Panic.ttf) format('truetype');
+    font-family: 'Roboto-normal';
+    src: url(/assets/fontes/Roboto-Black.ttf) format('truetype');
 }
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+@font-face {
+    font-family: 'Roboto-bold';
+    src: url(/assets/fontes/Roboto-Bold.ttf) format('truetype');
 }
 
 :root {
-    --main: #4a0101;
-    --background: #fbfbfb;
-    --contrast: #10380d;
-    --black: #000;
-    --white: #fff;
+    --main: #5e0202;
+    --main-ligth: #7e0303;
+    --green: #027353;
+    --blue: #085A8C;
+    --yellow: #EDA624;
+
+    --neutro-0: #000;
+    --neutro-1: #fff;
+    --neutro-2: #070606;
+}
+
+/* RESETS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* TAGS PADRÕES */
-/* main, body, header... */
+
 body {
-    overflow: hidden;
-    background-color: var(--main);
+    position: relative;
     width: 100vw;
     height: 100vh;
-}
-
-header {
-    display: grid;
-    place-items: center;
-    width: 100%;
-    height: 5%;
-}
-
-main {
-    position: relative;
-    width: 100%;
-    height: 95%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-a {
-    color: black;
+    overflow: hidden;
+    font-family: "Ubuntu", sans-serif;
     font-weight: 400;
 }
 
-a:hover {
-    text-decoration: none;
-    color: var(--contrast);
+main {
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 900;
+    font-size: clamp(2rem, 3rem, 4rem);
+    color: var(--main-ligth);
+    letter-spacing: 2px;
+    border: none;
+    text-shadow: 0px 0px 500px rgb(253, 1, 1);
+
+    ;
+}
+
+p {
+    font-size: clamp(12px, .8rem, 24px);
 }
 
 ul {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     width: 100%;
-    height: 100%;
-    align-items: center;
-}
-
-li a:hover {
-    text-decoration: dashed;
-    font-weight: 500;
-    color: var(--contrast);
 }
 
 li {
+    font-weight: 900;
     text-decoration: none;
     list-style-type: none;
     cursor: pointer;
+    transition: all 0.2s ease;
 }
 
-/* GERAIS */
-/* Classes de multiplos usos */
-
-.hidden {
-    display: none;
-    /* d-none (bootstrap)*/
-}
-
-.logo-img {
-    width: 20px;
-}
-
-.logo-li {
+nav {
+    padding: 0% 5%;
     display: flex;
-    flex-direction: row;
-    padding: 1%; /* mobile 1.5 */
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
-/* Header */
+a {
+    text-decoration: none;
+    color: var(--neutro-1);
+    font-size: 12px;
+}
 
-.nav-menu {
-    width: 20%;
+a:hover {
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+}
+
+
+/* Classes Gerais */
+
+/*texto t*/
+.t-stroke {
+    -webkit-text-stroke: 1px var(--neutro-0);
+}
+
+.t-shadow {
+    text-shadow: 5px 5px 5px var(--neutro-0);
+}
+
+/*texto*/
+
+.pointer {
+    cursor: pointer;
+}
+
+
+/* Classes Específicas  */
+
+.pages {
+    position: relative;
+    width: 100%;
     height: 100%;
+    background-color: var(--neutro-2);
     display: grid;
     place-items: center;
-    color: white;
 }
 
-.on {
-    height: 120%;
-    background-color: var(--background);
+.logo {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.btn-d {
+    width: 30%;
+    max-width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main);
+    color: var(--neutro-0);
+    font-size: .9rem;
     font-weight: 500;
-    color: var(--black);
+    box-shadow: 5px 5px 5px var(--neutro-0);
+    transition: all 0.3s ease;
 }
 
-/* Main */
-.content {
-    width: 80%;
-    height: 90%;
-    padding: 5% 0% 5% 0%;
+.btn-d:hover {
+    cursor: pointer;
+    box-shadow: 5px 5px 15px var(--neutro-0);
+    background-color: var(--main-ligth);
+    font-weight: 400;
+}
+
+page1-frames {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 5px;
     position: relative;
 }
 
-.cont-li {
+.img{
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
-/* IDs */
-
-#nav-menu-main {
-    height: 120%;
-    width: 20%;
-    min-width: 100px;
-    background-color: var(--black);
-    font-weight: 600;
-    color: var(--background);
+.r-hover{
+    box-shadow: 0px 0px 50px var(--main-ligth);
 }
 
-/* repositórios */
+/* CARDS */
 
 .card {
     position: relative;
     width: 300px;
-    height: 400px;
-
+    height: 450px;
+    /*300*/
     overflow: hidden;
     background-color: transparent;
-    border: none;
-    box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.5);
-    
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px var(--neutro-0);
 }
 
-.card-img {
-    height: auto;
+.absolute-a {
+    position: absolute;
+    left: 0px;
+}
+
+.card img {
     width: 100%;
+    height: 100%;
     border-radius: 5px;
-    background-color: blue;
 }
 
-
-/*  ANIMAÇÕES */
+.card-info {
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    width: 100%;
+    height: 100%;
+    margin: 5px;
+}
 
 .card-children {
+    height: 100%;
+    position: absolute;
     top: -100%;
     transition: top 0.5s ease;
-}
 
-.card-children.active {
-    top: 0;
 }
