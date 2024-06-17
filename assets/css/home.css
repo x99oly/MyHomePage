@@ -1,0 +1,148 @@
+@font-face {
+    font-family: 'personal1';
+    src: url(/assets/fontes/Black\ Mustang.ttf) format('truetype');
+}
+
+:root {
+    --main: #5e0202;
+    --green: #027353;
+    --blue: #085A8C;
+    --yellow: #EDA624;
+
+    --neutro-0: #000;
+    --neutro-1: #fff;
+    --neutro-2: #090707;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+/* Estilos da barra de rolagem para navegadores baseados em WebKit */
+::-webkit-scrollbar {
+    width: 12px;
+    /* Largura da barra de rolagem */
+}
+
+::-webkit-scrollbar-track {
+    background: black;
+    /* Cor do trilho da barra de rolagem */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #131313;
+    /* Cor do polegar da barra de rolagem */
+    border-radius: px;
+    /* Arredondamento do polegar */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(0, 0, 0);
+    /* Cor do polegar ao passar o mouse */
+}
+
+.logo {
+    width: 20px;
+}
+
+.hover-p:hover {
+    cursor: pointer;
+}
+
+li {
+    text-decoration: none;
+    list-style-type: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+li:hover {
+    color: rgb(128, 1, 1);
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.btn-d {
+    width: 100px;
+    height: 50px;
+    border-radius: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main);
+    color: var(--neutro-0);
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: 5px 5px 0px var(--neutro-0);
+    transition: all 0.3s ease;
+}
+
+.btn-d:hover {
+    cursor: pointer;
+    box-shadow: 5px 5px 15px var(--neutro-0);
+    font-weight: 700;
+}
+
+.nav-page-two {
+    position: absolute;
+    top: 5%;
+    width: 50%;
+    min-width: 250px;
+}
+
+.content {
+    opacity: 0;
+    transition: opacity 3s ease-in-out;
+}
+
+.content.loaded {
+    opacity: 1;
+}
+
+@media (max-width: 801px) {
+    .nav-page-two {
+        bottom: 5%;
+        top: auto;
+    }
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    background-color: transparent;
+    border: none;
+    box-shadow: 10px 5px 10px rgba(105, 1, 1, 0.5);
+}
+
+.card img {
+    width: 100%;
+    height: 400px;
+    border-radius: 5px;
+}
+
+.card-info{
+    padding: 5%;
+    width: 100%;
+    height: 400px;
+    margin: 5px;
+}
+
+.card-children {
+    border: 1px solid white;
+
+    height: 100%;
+    position: absolute;
+    top: -101%;
+    transition: top 0.5s ease;
+}
+
+.card-children.active {
+    top: 0;
+}

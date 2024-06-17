@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'pesonal1';
+    src: url(/assets/fontes/Black\ Mustang.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'pesonal2';
+    src: url(/assets/fontes/Panic.ttf) format('truetype');
+}
+
 * {
     padding: 0;
     margin: 0;

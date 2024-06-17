@@ -8,6 +8,13 @@
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Versão pre refactory</title>
+
+    <style>
+        @font-face {
+            font-family: 'pesonal1';
+            src: url(/assets/fontes/Black\ Mustang.ttf) format('truetype');
+        }
+    </style>
 </head>
 
 <body>
@@ -16,7 +23,7 @@
             <ul style="display: flex; flex-direction: row; justify-content: center;">
                 <li id="abt-header" class="mobile-none hidden nav-menu">Sobre</li>
                 <li id="rep-header" class="mobile-none hidden nav-menu">Projetos</li>
-                <li id="nav-menu-main" class="nav-menu">SAMUKA</li>
+                <li id="nav-menu-main" class="nav-menu" style="font-family: 'pesonal1'; letter-spacing: 2px; font-weight: 400 ; font-size: 32px;">SAMUKA</li>
                 <li id="art-header" class="mobile-none hidden nav-menu">GitHub</li>
                 <li id="git-header" class="mobile-none hidden nav-menu">Contato</li>
             </ul>
@@ -24,7 +31,9 @@
     </header>
     <main>
 
-        <div class="cont" style="position: absolute; bottom: 0% /*-70%*/; width: 100%; height: 75%; background-color: transparent;">
+
+        <div class="cont"
+            style="position: absolute; bottom: 0% /*-70%*/; width: 100%; height: 75%; background-color: transparent;">
 
             <nav>
                 <ul style="height: 40px; margin: 0;">
@@ -40,12 +49,14 @@
                         <img class="logo-img" src="assets/images/logos/contato-logo.png" alt="">
                         <span class="mobile-none">Contato</span>
                     </li>
-    
+
                 </ul>
             </nav>
 
-                <!-- DIV: Conteúdo da cont -->
-            <div style="background-color: var(--background); width: 100%;height: 95%; display: grid; place-items: center; padding: 0;">
+            <!-- DIV: Conteúdo da cont -->
+            <div
+                style="background-color: var(--background); width: 100%;height: 95%; display: grid; place-items: center; padding: 0;">
+
 
                 <!-- CAMPO SOBRE MIM  -->
 
@@ -66,53 +77,58 @@
 
                 <!-- CAMPO REPOSITÓRIOS  -->
 
-                <div class="content " style="display: flex; align-items: center; flex-direction: row; ">
+                <div class="content d-none" style="display: flex; align-items: center; flex-direction: row; ">
 
                     <a href="#">
                         <div class="card pointer" style="display: flex; flex-direction: column;">
 
-                            <div class="card-children pointer" style="width: 90%; height: 100px; position: absolute; top: -100%;">
-    
+                            <div class="card-children pointer"
+                                style="width: 90%; height: 100px; position: absolute; top: -100%;">
+
                                 <div class="card-img">
-                                       <img  src="assets/images/rosequartz.jpg"
-                                        style="height: 400px; min-width: 300px;" alt="">
+                                    <img src="assets/images/rosequartz.jpg" style="height: 400px; min-width: 300px;"
+                                        alt="">
                                 </div>
-    
+
                                 <ul style="display: flex; flex-direction: row;">
-                                    <li style="margin: 0px 5px"><img class="logo-img" src="assets/images/logos/c_sharp_logo.png" alt=""></li>
+                                    <li style="margin: 0px 5px"><img class="logo-img"
+                                            src="assets/images/logos/c_sharp_logo.png" alt=""></li>
                                     <li><img class="logo-img" src="assets/images/logos/c_sharp_logo.png" alt=""></li>
                                 </ul>
                                 <h4>Título</h4>
                                 <br>
                                 <p style="text-align: justify;">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, hic voluptas. Deserunt, unde dolores, recusandae harum, eos vitae repudiandae fugiat pariatur optio tempora vero? Fuga dolores atque possimus rem illo.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, hic voluptas.
+                                    Deserunt, unde dolores, recusandae harum, eos vitae repudiandae fugiat pariatur
+                                    optio tempora vero? Fuga dolores atque possimus rem illo.
                                 </p>
                             </div>
-                    </a>                                             
-
-                    </div>
+                    </a>
 
                 </div>
 
-                <!-- CAMPO Contato  -->
+            </div>
 
-                <div class="content d-none" style="display: grid; place-items: center;">
+            <!-- CAMPO Contato  -->
 
-                    <img src="assets/images/me-perfil.jpg" style="width: 200px; border-radius: 50%; position: absolute; top: 10%;" alt="">
+            <div class="content" style="display: grid; place-items: center;">
 
-                    <div style="width: 100%; display: grid; place-items: center; position: absolute; bottom: 10%">
-                        
+                <img src="assets/images/me-perfil.jpg"
+                    style="width: 200px; border-radius: 50%; position: absolute; top: 10%;" alt="">
+
+                <div style="width: 100%; display: grid; place-items: center; position: absolute; bottom: 10%">
+
                     <ul style="width: 35%;">
                         <a href="#" style="display: grid; place-items: center;">
-                            <img class="logo-img" src="assets/images/logos/linkedin.png"  alt="">
+                            <img class="logo-img" src="assets/images/logos/linkedin.png" alt="">
                             <li class="mobile-none">Linkedin</li>
                         </a>
                         <a href="#" style="display: grid; place-items: center;">
-                            <img class="logo-img" src="assets/images/logos/github-mark.png"  alt="">
+                            <img class="logo-img" src="assets/images/logos/github-mark.png" alt="">
                             <li class="mobile-none">GitHub</li>
                         </a>
                         <a href="#" style="display: grid; place-items: center;">
-                            <img class="logo-img" src="assets/images/logos/gmail.png"  alt="">
+                            <img class="logo-img" src="assets/images/logos/gmail.png" alt="">
                             <li class="mobile-none">E-mail</li>
                         </a>
                     </ul>
@@ -125,11 +141,11 @@
                             ಠ_ಠ
                         </p>
                     </a>
-                    </div>
-
                 </div>
 
             </div>
+
+        </div>
 
         </div>
 
