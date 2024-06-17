@@ -12,6 +12,9 @@ function changePosition(event) {
     }
 }
 
+function testando(){
+    alert('testado');
+}
 
 function handleMobileNones(){
 
