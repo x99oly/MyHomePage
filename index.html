@@ -39,14 +39,14 @@
     <title>Versão pre refactory</title>
 </head>
 
-<body style="background-color: black;">
+<body style="background-color: var(--neutro-2)">
     <main>
 
         <div id="main" class="pages d-none">
 
             <div class="content" style="display: grid; place-items: center;">
 
-                <h4 style="margin: 0; font-family: 'Mustang'; letter-spacing: 3px; font-size: 1.5rem;">
+                <h4 style="margin: 0; letter-spacing: 2px; font-size: 1rem;">
                     SAMUKA
                 </h4>
                 <h1 class=" ">
@@ -96,7 +96,7 @@
 
         <!--########################### FIM PÁGINA MAIN #########################################-->
 
-        <div id="projetos" class="pages d-none" style="width: 100%; height: 100%; background-color: var(--neutro-2);">
+        <div id="projetos" class="pages" style="width: 100%; height: 100%; background-color: var(--neutro-2);">
 
             <nav style=" position: absolute; bottom: 85%; ">
 
@@ -114,7 +114,7 @@
 
                 <div id="left" class="page-frames mobile-none">
 
-                    <div class="content-text"
+                    <div class="content-text mobile-none"
                         style="display: flex; flex-direction: column; gap: 100px; padding: 10%; width: 80%;">
                         <h4>Titulo</h4>
                         <p style="text-align: justify;">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -131,62 +131,11 @@
 
                 </div>
 
-                <div id="right" class="page-frames">
 
-                    <!--  CARD START  -->
+                    <button class="nav-button left" onclick="moveLeft()">&#9664;</button>
+                    <div id="right" class="page-frames"></div>
+                    <button class="nav-button right" onclick="moveRight()">&#9654;</button>
 
-                    <div style="display: flex; justify-content: center;">
-                        <a class="absolute-a" style="position: relative;" href="#" onclick="changePosition(event);">
-                            <div class="card pointer">
-                                <div class="card-children pointer">
-                                    <img src="assets/images/rosequartz.jpg" class="card-img" alt="">
-
-                                    <div class="card-info">
-                                        <ul class="card-icons" style="justify-content: flex-start !important;">
-                                            <li class="logo">
-                                                <img src="assets/images/logos/c_sharp_logo.png" alt="">
-                                            </li>
-                                            <li class="logo">
-                                                <img src="assets/images/logos/c_sharp_logo.png" alt="">
-                                            </li>
-                                        </ul>
-                                        <h4>Título</h4>
-                                        <p class="card-description">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, hic
-                                            voluptas.
-                                            Deserunt, unde
-                                            dolores, recusandae harum, eos vitae repudiandae fugiat pariatur optio
-                                            tempora
-                                            vero? Fuga
-                                            dolores atque possimus rem illo.
-                                        </p>
-                                        <ul class="card-collaborators" style="display: flex; flex-direction: column;">
-                                            <li>
-                                                <h6 style="color: var(--main);">Colaboradores</h6>
-                                            </li>
-                                            <li><img src="assets/images/me-perfil.jpg" class="collaborator-img"
-                                                    style="width: 15%; height: auto; border-radius: 50%;" alt=""></li>
-                                        </ul>
-                                        <p style="position: absolute; bottom: -100%; right: 40%;" class="hover"
-                                            onclick="testando()">
-                                            <span class="btn-d" style="width: 1000% !important; font-weight: 400;">
-                                                Saiba mais
-                                            </span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-
-                    </div>
-
-
-
-                    <!--  CARD END  -->
-
-
-
-                </div>
 
 
             </div>
@@ -238,7 +187,7 @@
 
         <!--########################### FIM PÁGINA CONTATO #########################################-->
 
-        <div id="blog" class="pages" style="width: 100%; height: 100%; background-color: var(--neutro-0);">
+        <div id="blog" class="pages d-none" style="width: 100%; height: 100%; background-color: var(--neutro-0);">
 
             <nav style=" position: absolute; bottom: 85%; ">
 
@@ -250,8 +199,9 @@
 
             </nav>
 
-            <div id="page-frames" style="width: 100%; height: 55%; align-self:center; display: grid; place-items: center;">
-                
+            <div id="page-frames"
+                style="width: 100%; height: 55%; align-self:center; display: grid; place-items: center;">
+
                 <div style="width: 300px; height: auto;">
                     <img class="img" src="assets/images/legado/Gaming-amico red.png" alt="">
                 </div>

@@ -22,27 +22,7 @@
 }
 
 /* Estilos da barra de rolagem para navegadores baseados em WebKit */
-::-webkit-scrollbar {
-    width: 12px;
-    /* Largura da barra de rolagem */
-}
 
-::-webkit-scrollbar-track {
-    background: black;
-    /* Cor do trilho da barra de rolagem */
-}
-
-::-webkit-scrollbar-thumb {
-    background: #131313;
-    /* Cor do polegar da barra de rolagem */
-    border-radius: px;
-    /* Arredondamento do polegar */
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: rgb(0, 0, 0);
-    /* Cor do polegar ao passar o mouse */
-}
 
 .logo {
     width: 20px;

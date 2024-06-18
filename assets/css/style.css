@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+
+
 @font-face {
     font-family: 'Mustang';
     src: url(/assets/fontes/Black\ Mustang.ttf) format('truetype');
@@ -37,6 +41,25 @@
 
 /* TAGS PADRÕES */
 
+::-webkit-scrollbar {
+    width: 15px;
+
+}
+
+::-webkit-scrollbar-track {
+    background: var(--neutro-0);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--neutro-2);
+    /* Cor do polegar da barra de rolagem */
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--main);
+}
+
 body {
     position: relative;
     width: 100vw;
@@ -54,14 +77,13 @@ main {
 
 h1 {
     text-align: center;
-    font-weight: 900;
-    font-size: clamp(2rem, 3rem, 4rem);
+    font-weight: 700;
+    font-size: clamp(2rem, 2rem, 4rem);
     color: var(--main-ligth);
-    letter-spacing: 2px;
     border: none;
-    text-shadow: 0px 0px 500px rgb(253, 1, 1);
-
-    ;
+    text-shadow: 0px 0px 100px var(--main);
+    font-family: "Rubik Mono One", monospace;
+    font-style: normal; 
 }
 
 p {
@@ -227,4 +249,38 @@ a:hover {
     top: -100%;
     transition: top 0.5s ease;
 
+}
+
+/* BOTÕESS NAVEGAÇÃO ENTRE OS PROJETOS */
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--main);
+    opacity: 0.5;
+    color: var(--neutro-1);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+
+.nav-button.left {
+    left: 48%;
+}
+
+@media (width <= 800px) {
+    .nav-button.left {
+        left: 0;
+    }
+}
+
+.nav-button.right {
+    right: 0%;
+}
+
+.page-frames.transition {
+    transition: transform 0.5s ease-out; /* Transição suave para o transform */
 }
