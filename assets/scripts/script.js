@@ -6,6 +6,41 @@ let vat = '0%';
 const num = 5;
 const intervalDuration = 5000;
 
+
+
+function buildNavs(){
+    const navis = document.querySelectorAll('.navi');
+
+    navis.forEach(navi => {
+        if (navi.classList.contains('main')){
+            let card = `
+            <nav class=" navi-${navi.id.value} ">
+                    <p>
+                        saiba mais
+                    </p>
+                    <ul">
+                        <li class="btn-d"><a href="#">blog</a></li>
+                        <li class="btn-d"><a href="#">projetos</a></li>
+                        <li class="btn-d"><a href="#">contate-me</a></li>
+                    </ul>
+                </nav>
+        `;
+        }else{
+            let card = `
+            <nav class=" navi-${navi.id.value} ">
+                    <ul">
+                        <li class="btn-d"><a href="#">blog</a></li>
+                        <li class="btn-d"><a href="#">projetos</a></li>
+                        <li class="btn-d"><a href="#">contate-me</a></li>
+                    </ul>
+                </nav>
+        `;            
+        }
+
+        navi.appendChild(card);
+    })
+}
+
 function buildCards() {
     for (let i = 0; i < num; i++) {
         let cardHTML = `
@@ -134,6 +169,7 @@ document.addEventListener("DOMContentLoaded", function () {
     page1MobileGridLayout();
     handleMobileNones();
     buildCards();
+    buildNavs();
 });
 
 // CHAMADAS DE MÉTODOS AO REDIMENSIONAR A JANELA

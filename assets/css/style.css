@@ -209,6 +209,39 @@ a:hover {
     align-items: center;
 }
 
+/* NAVS */
+.navi-main{
+    ul{
+        max-width: 350px;
+    }
+}
+
+.navi-projetos{
+    position: absolute;
+    bottom: 85%;
+
+    ul{
+        max-width: 350px;
+    }
+}
+
+.navi-contato{
+    position: absolute;
+    bottom: 85%;
+
+    ul{
+        max-width: 350px;
+    }
+}
+
+.navi-blog{
+    position: absolute;
+    bottom: 85%;
+
+    ul{
+        max-width: 350px;
+    }
+}
 /* CARDS */
 
 .card {
@@ -291,4 +324,8 @@ a:hover {
 .fade-in.visible {
     opacity: 1;
 }
+
+
+
+
 
