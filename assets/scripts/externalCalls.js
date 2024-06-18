@@ -1,3 +1,5 @@
+const apiGitHub = "https://api.github.com/";
+const gitHubMe = "users/x99oly";
 const objects = [];
 let vat = '0%';
 
@@ -96,6 +98,33 @@ function moveRight() {
     printCards();
 }
 
+
+function callApi(address){
+    return fetch(address)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Não foi possível acessar: ${address}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            return data;
+        })
+        .catch(error => {
+            console.error(`Falha no fetch (${address}): `, error);
+            throw error; // rethrow the error to propagate it further
+        });
+}
+
+let apiAddress = apiGitHub + gitHubMe;
+
+callApi(apiAddress)
+    .then(data => {
+        console.log(data); // Aqui você pode trabalhar com os dados recebidos
+    })
+    .catch(error => {
+        console.error('Erro ao chamar API:', error);
+    });
 
 
 // CHAMADAS DE MÉTODOS AO CARREGAR A PÁGINA
