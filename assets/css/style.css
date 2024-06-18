@@ -205,6 +205,8 @@ a:hover {
     display: flex;
     flex-direction: row;
     align-items: center;
+    max-width: 780px;
+    overflow: hidden;
 }
 
 
@@ -267,15 +269,6 @@ a:hover {
     left: 48%;
 }
 
-@media (width <=800px) {
-    .nav-button.left {
-        left: 0;
-    }
-
-    .mobile-none{
-        display: none;
-    }
-}
 
 .nav-button.right {
     right: 0%;
@@ -301,4 +294,23 @@ a:hover {
     opacity: 0;
     pointer-events: none;
 }
+
+
+/* QUERYS */
+
+@media (max-width: 800px) {
+    .nav-button.left {
+        left: 0;
+    }
+
+    .mobile-none {
+        display: none;
+    }
+
+   body{
+    overflow-x: hidden;
+   }
+}
+
+
 
