@@ -1,3 +1,5 @@
+
+Copiar código
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -42,11 +44,11 @@
 <body style="background-color: var(--neutro-2)">
     <main>
 
-        <div id="main" class="pages d-none navi">
+        <div id="main" class="pages main navi">
 
             <div class="content" style="display: grid; place-items: center;">
 
-                <h4 style="margin: 0; letter-spacing: 2px; font-size: 1rem;">
+                <h4 style="margin: 5% 0% 2% 0%; letter-spacing: 2px; font-size: 1rem;">
                     SAMUKA
                 </h4>
                 <h1 class=" ">
@@ -62,7 +64,7 @@
                         incidunt consequatur.
                     </span>
                 </p>
-                <ul id="icones-links-page0" style="width: 20%; max-width: 100px;">
+                <ul id="icones-links-page0" style="width: 2% ; min-width: 80px !important;">
                     <li>
                         <a href="#">
                             <img class="logo" src="assets/images/logos/linkedin.png" alt="">
@@ -80,16 +82,7 @@
                     </li>
                 </ul>
 
-                <nav class="navi-main">
-                    <p>
-                        saiba mais
-                    </p>
-                    <ul style="max-width: 350px;">
-                        <li class="btn-d"><a href="#">blog</a></li>
-                        <li class="btn-d"><a href="#">projetos</a></li>
-                        <li class="btn-d"><a href="#">contate-me</a></li>
-                    </ul>
-                </nav>
+              
             </div>
 
         </div>
@@ -98,15 +91,7 @@
 
         <div id="projetos" class="pages navi" style="width: 100%; height: 100%; background-color: var(--neutro-2);">
 
-            <nav class="navi-projetos" style=" position: absolute; bottom: 85%; ">
-
-                <ul style="max-width: 350px;">
-                    <li class="btn-d"><a href="#">blog</a></li>
-                    <li class="btn-d"><a href="#">projetos</a></li>
-                    <li class="btn-d"><a href="#">contate-me</a></li>
-                </ul>
-
-            </nav>
+            
 
             <div id="content-page1"
                 style="width: 100%; height: 85%; position: absolute; bottom: 0%; display: grid; grid-template-columns: repeat(2, 50%);">
@@ -139,26 +124,18 @@
 
 
             </div>
-
+            <a class="pointer to-main" style="position: absolute; bottom: 5%;" onClick="showPage('main')">Voltar ao início</a>
 
         </div>
 
         <!--########################### FIM PÁGINA PROJETOS #########################################-->
 
-        <div id="contato" class="pages d-none navi" style="width: 100%; height: 100%; background-color: var(--neutro-0);">
+        <div id="contato" class="pages navi" style="width: 100%; height: 100%; background-color: var(--neutro-2);">
 
-            <nav class="navi-contato" style=" position: absolute; bottom: 85%; ">
-
-                <ul style="max-width: 350px;">
-                    <li class="btn-d"><a href="#">blog</a></li>
-                    <li class="btn-d"><a href="#">projetos</a></li>
-                    <li class="btn-d"><a href="#">contate-me</a></li>
-                </ul>
-
-            </nav>
+            
 
             <div id="content-page2"
-                style="width: 100%; height: 85%; position: absolute; bottom: 0%; width: 100%; display: grid; place-items: center; background-color: var(--neutro-0);">
+                style="width: 100%; height: 85%; position: absolute; bottom: 0%; width: 100%; display: grid; place-items: center;">
 
                 <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
                     <div class="img-cont r-hover"
@@ -182,22 +159,15 @@
 
             </div>
 
+            <a class="pointer to-main" style="position: absolute; bottom: 5%;" onClick="showPage('main')">Voltar ao início</a>
 
         </div>
 
         <!--########################### FIM PÁGINA CONTATO #########################################-->
 
-        <div id="blog" class="pages d-none navi" style="width: 100%; height: 100%; background-color: var(--neutro-0);">
+        <div id="blog" class="pages navi" style="width: 100%; height: 100%; background-color: var(--neutro-2);">
 
-            <nav class="navi-blog" style=" position: absolute; bottom: 85%; ">
-
-                <ul style="max-width: 350px;">
-                    <li class="btn-d"><a href="#">blog</a></li>
-                    <li class="btn-d"><a href="#">projetos</a></li>
-                    <li class="btn-d"><a href="#">contate-me</a></li>
-                </ul>
-
-            </nav>
+            
 
             <div id="page-frames"
                 style="width: 100%; height: 55%; align-self:center; display: grid; place-items: center;">
@@ -209,6 +179,7 @@
 
             </div>
 
+            <a class="pointer to-main" style="position: absolute; bottom: 5%;" onClick="showPage('main')">Voltar ao início</a>
 
         </div>
 

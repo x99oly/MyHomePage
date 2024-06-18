@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
-
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
-
 
 @font-face {
     font-family: 'Mustang';
@@ -64,7 +62,7 @@ body {
     position: relative;
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
+   overflow-x: hidden;
     font-family: "Ubuntu", sans-serif;
     font-weight: 400;
 }
@@ -83,7 +81,7 @@ h1 {
     border: none;
     text-shadow: 0px 0px 100px var(--main);
     font-family: "Rubik Mono One", monospace;
-    font-style: normal; 
+    font-style: normal;
 }
 
 p {
@@ -94,7 +92,9 @@ ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 100%;
+    width: 30%;
+    min-width: 250px;
+    max-width: 400px;
 }
 
 li {
@@ -124,7 +124,6 @@ a:hover {
     color: white;
     font-size: 12px;
 }
-
 
 /* Classes Gerais */
 
@@ -162,8 +161,8 @@ a:hover {
 }
 
 .btn-d {
-    width: 30%;
-    max-width: 100px;
+    width: 30%; 
+    max-width: 120px;
     height: 40px;
     border-radius: 5px;
     display: flex;
@@ -184,7 +183,6 @@ a:hover {
     font-weight: 400;
 }
 
-
 .page1-frames {
     width: 100%;
     height: 100%;
@@ -194,56 +192,89 @@ a:hover {
     position: relative;
 }
 
-.img{
+.img {
     width: 100%;
     height: auto;
 }
 
-.r-hover{
+.r-hover {
     box-shadow: 0px 0px 50px var(--main-ligth);
 }
 
-.page-frames{
+.page-frames {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
 /* NAVS */
-.navi-main{
-    ul{
-        max-width: 350px;
-    }
-}
 
-.navi-projetos{
+.navi-main {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
     position: absolute;
     bottom: 85%;
-
-    ul{
-        max-width: 350px;
-    }
 }
 
-.navi-contato{
+.navi-main ul {
+    display: flex;
+    flex-direction: row; 
+}
+
+.navi-projetos {
     position: absolute;
-    bottom: 85%;
-
-    ul{
-        max-width: 350px;
-    }
+    bottom: 85%; 
 }
 
-.navi-blog{
+
+
+.navi-contato {
     position: absolute;
-    bottom: 85%;
+    bottom: 85%; 
+}
 
-    ul{
-        max-width: 350px;
+
+
+.navi-blog {
+    position: absolute;
+    bottom: 85%; 
+}
+
+@media (width <= 800) {
+    .navi-main {
+        display: flex;
+        flex-direction: row; 
+        justify-content: center;
+        position: absolute;
+        bottom: 5%;
+    }
+    .navi-projetos {
+        position: absolute;
+        bottom: 5%; 
+    }
+    
+    
+    
+    .navi-contato {
+        position: absolute;
+        bottom: 5%; 
+    }
+    
+    
+    
+    .navi-blog {
+        position: absolute;
+        bottom: 5%; 
+    }
+
+    .to-main{
+        bottom: 85%;
     }
 }
+
+
 /* CARDS */
-
 .card {
     position: relative;
     width: 300px;
@@ -281,11 +312,9 @@ a:hover {
     position: absolute;
     top: -100%;
     transition: top 0.5s ease;
-
 }
 
 /* BOTÕESS NAVEGAÇÃO ENTRE OS PROJETOS */
-
 .nav-button {
     position: absolute;
     top: 50%;
@@ -299,12 +328,11 @@ a:hover {
     z-index: 1;
 }
 
-
 .nav-button.left {
     left: 48%;
 }
 
-@media (width <= 800px) {
+@media (width <=800px) {
     .nav-button.left {
         left: 0;
     }
@@ -315,7 +343,6 @@ a:hover {
 }
 
 /* FADE PRA SUAVIZAR A CORRER A LISTA DOS CARDS */
-
 .fade-in {
     opacity: 0;
     transition: opacity 1s ease-in-out;
@@ -326,6 +353,13 @@ a:hover {
 }
 
 
+.pages {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+}
 
-
+.pages.d-none {
+    opacity: 0;
+    pointer-events: none;
+}
 

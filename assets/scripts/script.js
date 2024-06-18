@@ -5,41 +5,83 @@ const objects = [];
 let vat = '0%';
 const num = 5;
 const intervalDuration = 5000;
+const pagesID = [];
 
 
+
+function alertOnPageChange() {
+    const pages = document.querySelectorAll('.pages');
+    const pageHeight = 750; // Altura aproximada de cada página
+
+    window.addEventListener('scroll', function() {
+        const scrollPosition = window.scrollY + window.innerHeight;
+
+        pages.forEach(page => {
+            const pageTop = page.offsetTop;
+
+            if (scrollPosition >= pageTop && scrollPosition <= pageTop + pageHeight) {
+                console.log(`Página visível: ${page.id}`);
+            }
+        });
+    });
+}
+
+
+function returnPagesID(){
+    let pages = document.querySelectorAll('.pages');
+
+    pages.forEach(page => {
+        let id = page.id;
+        pagesID.push(id);
+    })
+    //alert(pagesID); main,projetos,contato,blog
+}
 
 function buildNavs(){
     const navis = document.querySelectorAll('.navi');
 
     navis.forEach(navi => {
+
+        let card = document.createElement('div');
+        
         if (navi.classList.contains('main')){
-            let card = `
-            <nav class=" navi-${navi.id.value} ">
-                    <p>
-                        saiba mais
-                    </p>
-                    <ul">
-                        <li class="btn-d"><a href="#">blog</a></li>
-                        <li class="btn-d"><a href="#">projetos</a></li>
-                        <li class="btn-d"><a href="#">contate-me</a></li>
+            card.innerHTML  = `
+            <nav class=" navi-${navi.id} ">
+                    <ul>
+                        <li class="btn-d"><a onClick="showPage('blog')">blog</a></li>
+                        <li class="btn-d"><a onClick="showPage('projetos')">projetos</a></li>
+                        <li class="btn-d"><a onClick="showPage('contato')">contate-me</a></li>
                     </ul>
                 </nav>
         `;
         }else{
-            let card = `
-            <nav class=" navi-${navi.id.value} ">
-                    <ul">
-                        <li class="btn-d"><a href="#">blog</a></li>
-                        <li class="btn-d"><a href="#">projetos</a></li>
-                        <li class="btn-d"><a href="#">contate-me</a></li>
+            card.innerHTML  = `
+            <nav class=" navi-${navi.id} ">
+                    <ul>
+                        <li class="btn-d"><a onClick="showPage('blog')">blog</a></li>
+                        <li class="btn-d"><a onClick="showPage('projetos')">projetos</a></li>
+                        <li class="btn-d"><a onClick="showPage('contato')">contate-me</a></li>
                     </ul>
                 </nav>
         `;            
         }
 
-        navi.appendChild(card);
+        navi.appendChild(card.firstElementChild);
     })
 }
+
+function showPage(pageToShow) {
+    let pages = document.querySelectorAll('.pages');
+
+    pages.forEach(page => {
+        if(page.id !== pageToShow){
+            page.classList.add('d-none');
+        }else{
+            page.classList.remove('d-none');
+        }
+    });
+}
+
 
 function buildCards() {
     for (let i = 0; i < num; i++) {
@@ -166,10 +208,11 @@ function changePosition(event) {
 // CHAMADAS DE MÉTODOS AO CARREGAR A PÁGINA
 
 document.addEventListener("DOMContentLoaded", function () {
+    buildNavs();
     page1MobileGridLayout();
     handleMobileNones();
     buildCards();
-    buildNavs();
+    returnPagesID();
 });
 
 // CHAMADAS DE MÉTODOS AO REDIMENSIONAR A JANELA
