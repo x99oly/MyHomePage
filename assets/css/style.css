@@ -281,6 +281,14 @@ a:hover {
     right: 0%;
 }
 
-.page-frames.transition {
-    transition: transform 0.5s ease-out; /* Transição suave para o transform */
+/* FADE PRA SUAVIZAR A CORRER A LISTA DOS CARDS */
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
+
+.fade-in.visible {
+    opacity: 1;
+}
+

@@ -1,34 +1,13 @@
-// Função para buscar imagens de uma pasta
-async function fetchImagesFromFolder(folderPath) {
-    const imagesArray = [];
 
-    try {
-        const response = await fetch(folderPath);
-        const html = await response.text();
-        
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(html, 'text/html');
-        const imgElements = doc.querySelectorAll('img');
-        
-        imgElements.forEach(img => {
-            imagesArray.push(img.src);
-        });
-        
-    } catch (error) {
-        console.error('Erro ao carregar imagens da pasta:', error);
-    }
-
-    return imagesArray;
-}
 
 // Variáveis globais
 const objects = [];
 let vat = '0%';
+const num = 5;
+const intervalDuration = 5000;
 
-// Função para construir os cards com base nos URLs das imagens
 function buildCards() {
-    const titulos = ["T 0", "T 1", "T 2", "T 3"];
-    for (let i = 0; i < titulos.length; i++) {
+    for (let i = 0; i < num; i++) {
         let cardHTML = `
             <div style="display: flex; justify-content: center;">
                 <a class="absolute-a" style="position: relative;" href="#" onclick="changePosition(event)">
@@ -45,7 +24,7 @@ function buildCards() {
                                         <img src="assets/images/logos/c_sharp_logo.png" alt="">
                                     </li>
                                 </ul>
-                                <h4>${titulos[i]}</h4>
+                                <h4>T${i}</h4>
                                 <p class="card-description">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, hic
                                     voluptas.
@@ -63,7 +42,7 @@ function buildCards() {
                                             style="width: 15%; height: auto; border-radius: 50%;" alt=""></li>
                                 </ul>
                                 <p style="position: absolute; bottom: -100%; right: 40%;" class="hover">
-                                    <span class="btn-d" onclick="openRepository()" style="width: 1000% !important; font-weight: 400;">
+                                    <span class="btn-d" onclick="goToPage('/repositorio.html')" style="width: 1000% !important; font-weight: 400;">
                                         Saiba mais
                                     </span>
                                 </p>
@@ -78,63 +57,52 @@ function buildCards() {
     printCards();
 }
 
-// Função para imprimir os cards na tela
 function printCards() {
     const container = document.getElementById('right');
     container.innerHTML = '';
 
     objects.forEach((cardHTML) => {
-        // Cria um elemento temporário para manipular o HTML
         const tempDiv = document.createElement('div');
         tempDiv.innerHTML = cardHTML.trim();
         const cardElement = tempDiv.firstChild;
 
-        // Acessa o elemento filho .card-children e alterna seu valor top
+        // Adiciona a classe de fade-in
+        cardElement.classList.add('fade-in');
+
         const cardChildren = cardElement.querySelector('.card-children');
         if (vat === '0%') {
-            cardChildren.style.top = '-100%';
+            cardChildren.style.top = vat;
             vat = '-100%';
         } else {
-            cardChildren.style.top = '0%';
+            cardChildren.style.top = vat;
             vat = '0%';
         }
 
-        // Adiciona o card alterado ao container
         container.appendChild(cardElement);
+
+        setTimeout(() => {
+            cardElement.classList.add('visible');
+        }, 70);
     });
 }
 
-// Função para mover cards para a esquerda
+
 function moveLeft() {
     const lastCard = objects.pop();
-    objects.unshift(lastCard); 
-    applyTransition();
-    printCards(); 
+    objects.unshift(lastCard);
+    printCards();
 }
 
-// Função para mover cards para a direita
 function moveRight() {
-    const firstCard = objects.shift(); 
+    const firstCard = objects.shift();
     objects.push(firstCard);
-    applyTransition();
-    printCards(); 
+    printCards();
 }
 
-// Função para aplicar transição aos cards
-function applyTransition() {
-    const container = document.getElementById('right');
-    container.classList.add('transition');
-    setTimeout(() => {
-        container.classList.remove('transition');
-    }, 500);
+function goToPage(adress) {
+    window.location.href = adress;
 }
 
-// Função para abrir o repositório (exemplo)
-function openRepository() {
-    window.location.href = 'repositorio.html';
-}
-
-// Funções para ajustar layout responsivo
 function handleMobileNones() {
     const mls = document.querySelectorAll('.mobile-none');
     if (!returnTrueForMobileWidth()) {
@@ -153,11 +121,11 @@ function returnTrueForMobileWidth() {
     return window.innerWidth <= 800;
 }
 
-// Função para alternar posição do card ao clicar
 function changePosition(event) {
     event.preventDefault();
     const cardChildren = event.currentTarget.querySelector('.card-children');
     cardChildren.style.top = cardChildren.style.top === '0%' ? '-100%' : '0%';
+    cardChildren.classList.add('blockChangePosition');
 }
 
 // CHAMADAS DE MÉTODOS AO CARREGAR A PÁGINA
@@ -174,3 +142,21 @@ window.addEventListener("resize", function () {
     page1MobileGridLayout();
     handleMobileNones();
 });
+
+// CHAMADAS DE MÉTODOS POR INTERVALO DE TEMPO
+
+setInterval(() => {
+    const cards = document.querySelectorAll('#right .card-children');
+    cards.forEach(cardChildren => {
+        cardChildren.classList.remove('blockChangePosition');
+    });
+}, intervalDuration * 3);
+
+setInterval(() => {
+    const cards = document.querySelectorAll('#right .card-children');
+    cards.forEach(cardChildren => {
+        if (!cardChildren.classList.contains('blockChangePosition')) {
+            cardChildren.style.top = cardChildren.style.top === '0%' ? '-100%' : '0%';
+        }
+    });
+}, intervalDuration);
