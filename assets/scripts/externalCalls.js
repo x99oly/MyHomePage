@@ -95,3 +95,16 @@ function moveRight() {
     objects.push(firstCard);
     printCards();
 }
+
+
+
+// CHAMADAS DE MÉTODOS AO CARREGAR A PÁGINA
+
+document.addEventListener("DOMContentLoaded", function () {
+    buildCards();
+});
+
+// CHAMADAS DE MÉTODOS AO REDIMENSIONAR A JANELA
+
+window.addEventListener("resize", function () {
+});

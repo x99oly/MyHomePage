@@ -56,7 +56,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 window.addEventListener("resize", function () {
     page1MobileGridLayout();
-    //handleMobileNones();
 });
 
 // CHAMADAS DE MÉTODOS POR INTERVALO DE TEMPO
