@@ -210,7 +210,7 @@ function changePosition(event) {
 document.addEventListener("DOMContentLoaded", function () {
     buildNavs();
     page1MobileGridLayout();
-    handleMobileNones();
+    //handleMobileNones();
     buildCards();
     returnPagesID();
 });
@@ -219,7 +219,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 window.addEventListener("resize", function () {
     page1MobileGridLayout();
-    handleMobileNones();
+    //handleMobileNones();
 });
 
 // CHAMADAS DE MÉTODOS POR INTERVALO DE TEMPO

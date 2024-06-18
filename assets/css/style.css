@@ -305,6 +305,10 @@ a:hover {
     .nav-button.left {
         left: 0;
     }
+
+    .mobile-none{
+        display: none;
+    }
 }
 
 .nav-button.right {
