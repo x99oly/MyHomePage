@@ -241,37 +241,6 @@ a:hover {
     bottom: 85%; 
 }
 
-@media (width <= 800) {
-    .navi-main {
-        display: flex;
-        flex-direction: row; 
-        justify-content: center;
-        position: absolute;
-        bottom: 5%;
-    }
-    .navi-projetos {
-        position: absolute;
-        bottom: 5%; 
-    }
-    
-    
-    
-    .navi-contato {
-        position: absolute;
-        bottom: 5%; 
-    }
-    
-    
-    
-    .navi-blog {
-        position: absolute;
-        bottom: 5%; 
-    }
-
-    .to-main{
-        bottom: 85%;
-    }
-}
 
 
 /* CARDS */
