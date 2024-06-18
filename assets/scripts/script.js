@@ -9,23 +9,6 @@ const pagesID = [];
 
 
 
-function alertOnPageChange() {
-    const pages = document.querySelectorAll('.pages');
-    const pageHeight = 750; // Altura aproximada de cada página
-
-    window.addEventListener('scroll', function() {
-        const scrollPosition = window.scrollY + window.innerHeight;
-
-        pages.forEach(page => {
-            const pageTop = page.offsetTop;
-
-            if (scrollPosition >= pageTop && scrollPosition <= pageTop + pageHeight) {
-                console.log(`Página visível: ${page.id}`);
-            }
-        });
-    });
-}
-
 
 function returnPagesID(){
     let pages = document.querySelectorAll('.pages');
@@ -35,51 +18,6 @@ function returnPagesID(){
         pagesID.push(id);
     })
     //alert(pagesID); main,projetos,contato,blog
-}
-
-function buildNavs(){
-    const navis = document.querySelectorAll('.navi');
-
-    navis.forEach(navi => {
-
-        let card = document.createElement('div');
-        
-        if (navi.classList.contains('main')){
-            card.innerHTML  = `
-            <nav class=" navi-${navi.id} ">
-                    <ul>
-                        <li class="btn-d"><a onClick="showPage('blog')">blog</a></li>
-                        <li class="btn-d"><a onClick="showPage('projetos')">projetos</a></li>
-                        <li class="btn-d"><a onClick="showPage('contato')">contate-me</a></li>
-                    </ul>
-                </nav>
-        `;
-        }else{
-            card.innerHTML  = `
-            <nav class=" navi-${navi.id} ">
-                    <ul>
-                        <li class="btn-d"><a onClick="showPage('blog')">blog</a></li>
-                        <li class="btn-d"><a onClick="showPage('projetos')">projetos</a></li>
-                        <li class="btn-d"><a onClick="showPage('contato')">contate-me</a></li>
-                    </ul>
-                </nav>
-        `;            
-        }
-
-        navi.appendChild(card.firstElementChild);
-    })
-}
-
-function showPage(pageToShow) {
-    let pages = document.querySelectorAll('.pages');
-
-    pages.forEach(page => {
-        if(page.id !== pageToShow){
-            page.classList.add('d-none');
-        }else{
-            page.classList.remove('d-none');
-        }
-    });
 }
 
 
@@ -180,15 +118,6 @@ function goToPage(adress) {
     window.location.href = adress;
 }
 
-function handleMobileNones() {
-    const mls = document.querySelectorAll('.mobile-none');
-    if (!returnTrueForMobileWidth()) {
-        mls.forEach(ml => ml.classList.remove('d-none'));
-    } else {
-        mls.forEach(ml => ml.classList.add('d-none'));
-    }
-}
-
 function page1MobileGridLayout() {
     const content = document.getElementById('content-page1');
     content.style.gridTemplateColumns = returnTrueForMobileWidth() ? 'repeat(1, 100%)' : 'repeat(2, 50%)';
@@ -208,9 +137,7 @@ function changePosition(event) {
 // CHAMADAS DE MÉTODOS AO CARREGAR A PÁGINA
 
 document.addEventListener("DOMContentLoaded", function () {
-    buildNavs();
     page1MobileGridLayout();
-    //handleMobileNones();
     buildCards();
     returnPagesID();
 });
@@ -219,7 +146,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 window.addEventListener("resize", function () {
     page1MobileGridLayout();
-    //handleMobileNones();
 });
 
 // CHAMADAS DE MÉTODOS POR INTERVALO DE TEMPO
