@@ -1,7 +1,15 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import  Alink  from './a_link';
+'use client'
+
+import 'bootstrap/dist/css/bootstrap.min.css'
+
+import  Alink  from './a_link'
+import { useEffect } from 'react'
 
 export default function Navbar() {
+  useEffect(() => {
+    import("bootstrap")
+  }, [])
+  
   return (
     <header className="navbar navbar-expand-lg navbar-dark fixed-top" style={{ backgroundColor: 'var(--background)'}}>
       <div className="container-fluid">
@@ -26,5 +34,5 @@ export default function Navbar() {
         </nav>
       </div>
     </header>
-  );
+  )
 }
