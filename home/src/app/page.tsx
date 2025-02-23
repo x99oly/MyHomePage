@@ -1,15 +1,38 @@
+"use client"
 // src/app/Home.tsx
 import Image from 'next/image';
 import Navbar from '@components/navbar'; 
 import ContentTwin from '@/components/contenttwin';
-import 'bootstrap/dist/css/bootstrap.min.css'; 
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { useEffect, useState } from 'react';
+import { TextboxInterface } from '@/interfaces/textbox-interface';
+import { ClassData} from '@/lib/classdata';
 
 export default function Home() {
+  const [data, setData] = useState<TextboxInterface | undefined>(undefined);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const dataInstance = new ClassData();
+      const result = await dataInstance.GetTextBox('about-me');
+      
+      if (result) {
+        console.log('Converted Data:', result);
+        setData(result);
+      } else {
+        console.log('No data found for about-me.');
+      }
+    };
+  
+    fetchData();
+  }, []);
+  
+  
   return (
     <div className="text-white" style={{ backgroundColor: 'var(--background)' }}>
       <Navbar />      
       <div style={{ height: '8vh', visibility: 'hidden' }}></div> {/* Div fantasma - só quero saltar o espaço*/}
-      
       <ContentTwin>
         <div className='d-flex justify-content-center align-items-center' style={{ width:'100%', height:'100%'}}>
           <Image
