@@ -8,19 +8,19 @@ interface ContentTwinProps {
 const ContentTwin: React.FC<ContentTwinProps> = ({ children }) => {
   return (
     <div className="row justify-content-center align-items-center"
-      style={{ height: '90vh', border: '2px solid green', }} >
+      style={{ height: '90vh' }} >
         <div className="d-flex h-100 justify-content-center align-items-center"
-          style={{  width: '50vw',  border: '2px solid blue', }}
+          style={{  width: '50vw',}}
         >
-            <div style={{ width: '80%', height: '80%', border: '1px solid yellow', overflow:'hidden' }}>
+            <div style={{ width: '80%', height: '80%', overflow:'hidden' }}>
               {children[0]}
             </div>
         </div>
         <div
           className="d-flex h-100 justify-content-center align-items-center"
-          style={{ width: '50vw', border: '2px solid blue', }}
+          style={{ width: '50vw'}}
         >
-          <div style={{ width: '80%', height: '80%', border: '1px solid orange', overflow:'hidden' }}>
+          <div style={{ width: '80%', height: '80%', overflow:'hidden' }}>
             {children[1]}
           </div>
         </div>
