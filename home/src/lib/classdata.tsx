@@ -7,6 +7,11 @@ export class ClassData {
     return data ? this.convertToTextboxInterface(data) : undefined;
   }
 
+  async GetRepository(title: string): Promise<TextboxInterface | undefined> {
+    const data = await this.GetDataFromJson('repositorys', title);
+    return data ? this.convertToTextboxInterface(data) : undefined;
+  }
+
   async GetDataFromJson(origem: string, title: string): Promise<any | undefined> {
     const response = await fetch("/data/dados.json");
     const data = await response.json();
