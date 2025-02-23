@@ -1,0 +1,38 @@
+[
+    {
+        "me" : {
+            "name" : "Samuel",
+            "middlename" : "Araujo",
+            "lastname" : "De Oliveira",
+            "stacks": [
+                "C#", ".NET", "ASP.NET", "MySql", "Next.js", "Python", "Flask", "Bootstrap"
+            ]
+        }
+    },
+    {
+        "text-box" : [
+            {
+                "about-me" : {
+                    "title":"DESENVOLVEDOR FULL-STACK",
+                    "stacks":"C# | .NET | ASP.NET | MySql | Next.js | Python | Flask | Bootstrap",
+                    "paragraphs":[
+                        "Estudante de programação focado em se especializar em desenvolvimento back-end, com ênfase em .NET. Formado como técnico em administração, valorizo a organização e o planejamento como pilares essenciais na construção de projetos. Por isso, busco me constantemente aprimorar meus conhecimentos em arquitetura de software e na aplicação de princípios SOLID.",
+                        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium, molestiae recusandae enim perspiciatis, quia a, ipsum iusto placeat eaque ullam ratione illum nobis consequatur beatae temporibus nisi. Et, mollitia expedita? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil aperiam iste provident delectus quos corrupti voluptatibus eligendi hic animi rem, facere maiores? Repudiandae, ratione rerum dolor cumque quibusdam suscipit vel."
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "repositorys" : [
+            {
+                "repository" : {
+                    "title" : "",
+                    "link" : "",
+                    "about" : "",
+                    "img" : ""
+                }
+            }
+        ]
+    }
+]

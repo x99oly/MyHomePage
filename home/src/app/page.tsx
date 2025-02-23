@@ -27,8 +27,11 @@ export default function Home() {
           <br></br>
           <p>
             Estudante de programação focado em se especializar em desenvolvimento back-end, com ênfase em .NET. Formado como técnico em administração, valorizo a organização e o planejamento como pilares essenciais na construção de projetos. Por isso, busco me constantemente aprimorar meus conhecimentos em arquitetura de software e na aplicação de princípios SOLID.
-          </p>
-        
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium, molestiae recusandae enim perspiciatis, quia a, ipsum iusto placeat eaque ullam ratione illum nobis consequatur beatae temporibus nisi. Et, mollitia expedita?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil aperiam iste provident delectus quos corrupti voluptatibus eligendi hic animi rem, facere maiores? Repudiandae, ratione rerum dolor cumque quibusdam suscipit vel.
+            <br></br>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet quos quia fugiat alias cupiditate totam fuga odio officia, id nemo, voluptatibus mollitia iure tempore accusantium magni. Excepturi quae labore eius!
+          </p>        
         </div>  
       </ContentTwin>
     </div>
