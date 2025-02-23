@@ -21,8 +21,7 @@
     "paths": {
       "@/*": ["./src/*"],
       "@components/*": ["./src/components/*"],
-      "@interfaces/*": ["./src/interfaces/*"],
-      "bootstrap/dist/js/bootstrap": ["./node_modules/@types/bootstrap"]
+      "@interfaces/*": ["./src/interfaces/*"]
     }
   },
   "include": [
