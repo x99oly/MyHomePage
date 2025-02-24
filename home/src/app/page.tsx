@@ -24,30 +24,41 @@ export default function Home() {
         console.log('No data found for about-me.');
       }
     };
-
     fetchData();
   }, []);
 
+  window.addEventListener('resize', ()=>{
+    const contentTwins = document.querySelectorAll('.content-twin')
+      contentTwins.forEach( c => {
+        if (window.innerWidth > 900){
+          c.classList.remove('column')
+          c.classList.add('row')
+        }else{
+          c.classList.remove('row')
+          c.classList.add('column')
+      }
+      })    
+  })
+
   return (
-    <div className="text-white" style={{ backgroundColor: 'var(--background)' }}>
+    <div className="text-white h-auto">
       <Navbar />
-      <div style={{ height: '8vh', visibility: 'hidden' }}></div> {/* Div fantasma */}
       <ContentTwin>
-        <div className='d-flex justify-content-center align-items-center' style={{ width:'100%', height:'100%'}}>
-          <Image
-            src="/eu-bg-black.png" alt=""
-            width={200} height={200}
-            priority={true}
-            style={{ width: '40%', height: 'auto' }}
+        <div className="d-flex justify-content-center align-items-center w-100 h-100">
+          <Image 
+            src="/eu-bg-black.png" 
+            alt="" 
+            width={200} 
+            height={250} 
+            priority={false} 
           />
+        {/* <div className="align-items-center border border-white w-100" style={{ minWidth: '500px', maxWidth:'70%' }}></div> */}
         </div>
-        
-        <TextboxComponent 
-          title={data?.title || ''} 
-          stacks={data?.stacks || ''} 
-          paragraphs={data?.paragraphs || []}
-        />        
+        <div >
+        <TextboxComponent title={data?.title || ''} stacks={data?.stacks || ''} paragraphs={data?.paragraphs || []} /> 
+       </div>      
       </ContentTwin>
-    </div>
+  </div>
+
   );
 }

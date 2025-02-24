@@ -3,18 +3,19 @@
   --foreground: #ededed;
 }
 
-html,
-body {
+html, body {
   max-width: 100vw;
+  height: auto;
   overflow-x: hidden;
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: var(--foreground);   
-  background-color: var(--background);  
+  color: var(--foreground) !important;   
+  background-color: var(--background) !important;  
 }
 
 * {
+  background-color: transparent;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -29,4 +30,17 @@ a {
   html {
     color-scheme: dark; /* Especifica que o esquema escuro deve ser usado */
   }
+}
+
+/* 
+PERSONALIZADOS
+*/
+
+.column{
+  display: flex;
+  flex-direction: column;
+}
+.row{
+  display: flex;
+  flex-direction: row;
 }

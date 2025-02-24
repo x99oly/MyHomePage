@@ -7,23 +7,17 @@ interface ContentTwinProps {
 
 const ContentTwin: React.FC<ContentTwinProps> = ({ children }) => {
   return (
-    <div className="row justify-content-center align-items-center"
-      style={{ height: '90vh' }} >
-        <div className="d-flex h-100 justify-content-center align-items-center"
-          style={{  width: '50vw',}}
-        >
-            <div style={{ width: '80%', height: '80%', overflow:'hidden' }}>
-              {children[0]}
-            </div>
+    <div className="content-twin d-flex"
+    style={{ height: '90vh', overflow: 'hidden', border:'1px solid white' }}>
+
+        <div className="d-flex justify-content-center align-items-end" style={{ width: '50%', maxWidth: '100%', border:'1px solid yellow' }}>
+            {children[0]}
         </div>
-        <div
-          className="d-flex h-100 justify-content-center align-items-center"
-          style={{ width: '50vw'}}
-        >
-          <div style={{ width: '80%', height: '80%', overflow:'hidden' }}>
+
+        <div className="d-flex justify-content-center align-items-end" style={{ width: '50%', maxWidth: '100%', border:'1px solid green' }}>
             {children[1]}
-          </div>
         </div>
+
     </div>
   );
 };
