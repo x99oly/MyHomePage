@@ -1,0 +1,27 @@
+.content-twin {
+    width: 100%;
+    min-height: 800px;
+    height: 100%;
+    overflow-x: hidden;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+  }
+  
+  .content-twin-children {
+    height: 100%;
+    width: 50%;
+  }
+  
+  @media (max-width: 768px) {
+    .content-twin {
+      flex-direction: column;
+    }
+  
+    .content-twin-children {
+      width: 100%;
+    }
+  }
+  

@@ -35,28 +35,3 @@ a {
     color-scheme: dark; /* Especifica que o esquema escuro deve ser usado */
   }
 }
-
-/* 
-PERSONALIZADOS
-*/
-
-.content-twin{
-  display: flex;
-  flex-direction: row;
-}
-
-.content-twin-children{
-  height: 100%;
-  width: 50%;
-}
-
-@media (max-width: 768px) {
-  .content-twin-children{
-      width: 100%;
-  }
-
-  .content-twin{
-    display: flex;
-    flex-direction: column;
-  }
-}

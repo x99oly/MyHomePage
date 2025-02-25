@@ -1,8 +1,9 @@
 import React, { ReactNode } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '@/components/contenttwin.css';
 
 interface ContentTwinProps {
-  children: ReactNode[]; // Dois filhos para o conteúdo
+  children: ReactNode[];
 }
 const pos = ["start", "end"]
 const ContentTwin: React.FC<ContentTwinProps> = ({ children }) => {
