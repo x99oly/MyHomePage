@@ -22,10 +22,10 @@ export default function Navbar() {
         <nav className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-                <Alink title="SOBRE MIM" link="#Link" />
+                <Alink title="SOBRE MIM" link="#about" />
             </li>
             <li className="nav-item">
-                <Alink title="PORTIFÓLIO" link="#Portifolio" />
+                <Alink title="PORTIFÓLIO" link="#portifolio" />
             </li>
             <li className="nav-item">
                 <Alink title="CONTATO" link="#Contato" />

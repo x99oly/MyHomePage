@@ -10,6 +10,7 @@ const TextboxComponent: React.FC<TextboxInterface> = ({ title, stacks, paragraph
       {paragraphs.map((p, index) => (
         <p key={index}>{p}</p>
       ))}
+      <br/>
     </div>
   );
 };

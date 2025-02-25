@@ -32,7 +32,7 @@ export default function Home() {
       <Navbar />
       <div style={{ height: '7vh', maxHeight:'150px', minHeight:'50px', width: '100%', visibility: 'hidden' }}></div>
 
-      <div className='d-flex justify-content-center align-content-center' style={{width:'100vw'}}>
+      <div id='about' className='d-flex justify-content-center align-content-center' style={{width:'100vw'}}>
         <ContentTwin>
           <div className="d-flex justify-content-center align-items-center" style={{ width:'100%', minHeight: '500px', height:'100%'}}>
             <Image 
@@ -44,12 +44,12 @@ export default function Home() {
             />
           </div>
           <div >
-            <TextboxComponent title={data?.title || ''} stacks={data?.stacks || ''} paragraphs={data?.paragraphs || []} /> 
+            <TextboxComponent title={data?.title || ''} stacks={data?.stacks || ''} paragraphs={data?.paragraphs || []} />
           </div>      
         </ContentTwin>
       </div>
 
-      <div className='d-flex justify-content-center align-content-center' style={{width:'100vw'}}>
+      <div id='portifolio' className='d-flex justify-content-center align-content-center' style={{width:'100vw'}}>
         <ContentTwin>
           <div className="d-flex justify-content-center align-items-center" style={{ width:'100%', minHeight: '500px', height:'100%'}}>
             <Image 
