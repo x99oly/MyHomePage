@@ -27,37 +27,45 @@ export default function Home() {
     fetchData();
   }, []);
 
-  window.addEventListener('resize', ()=>{
-    const contentTwins = document.querySelectorAll('.content-twin')
-      contentTwins.forEach( c => {
-        if (window.innerWidth > 900){
-          c.classList.remove('column')
-          c.classList.add('row')
-        }else{
-          c.classList.remove('row')
-          c.classList.add('column')
-      }
-      })    
-  })
-
   return (
-    <div className="text-white h-auto">
+    <div className="h-auto">
       <Navbar />
-      <ContentTwin>
-        <div className="d-flex justify-content-center align-items-center w-100 h-100">
-          <Image 
-            src="/eu-bg-black.png" 
-            alt="" 
-            width={200} 
-            height={250} 
-            priority={false} 
-          />
-        {/* <div className="align-items-center border border-white w-100" style={{ minWidth: '500px', maxWidth:'70%' }}></div> */}
-        </div>
-        <div >
-        <TextboxComponent title={data?.title || ''} stacks={data?.stacks || ''} paragraphs={data?.paragraphs || []} /> 
-       </div>      
-      </ContentTwin>
+      <div style={{ height: '7vh', maxHeight:'150px', minHeight:'50px', width: '100%', visibility: 'hidden' }}></div>
+
+      <div className='d-flex justify-content-center align-content-center' style={{width:'100vw'}}>
+        <ContentTwin>
+          <div className="d-flex justify-content-center align-items-center" style={{ width:'100%', minHeight: '500px', height:'100%'}}>
+            <Image 
+              src="/eu-bg-black.png" 
+              alt="" 
+              width={200} 
+              height={250} 
+              priority={false} 
+            />
+          </div>
+          <div >
+            <TextboxComponent title={data?.title || ''} stacks={data?.stacks || ''} paragraphs={data?.paragraphs || []} /> 
+          </div>      
+        </ContentTwin>
+      </div>
+
+      <div className='d-flex justify-content-center align-content-center' style={{width:'100vw'}}>
+        <ContentTwin>
+          <div className="d-flex justify-content-center align-items-center" style={{ width:'100%', minHeight: '500px', height:'100%'}}>
+            <Image 
+              src="/eu-bg-black.png" 
+              alt="" 
+              width={200} 
+              height={250} 
+              priority={false} 
+            />
+          </div>
+          <div >
+            <TextboxComponent title={data?.title || ''} stacks={data?.stacks || ''} paragraphs={data?.paragraphs || []} /> 
+          </div>      
+        </ContentTwin>
+      </div>
+
   </div>
 
   );

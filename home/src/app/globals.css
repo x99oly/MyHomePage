@@ -11,7 +11,7 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--foreground) !important;   
-  background-color: var(--background) !important;  
+  background-color: var(--background) !important;
 }
 
 * {
@@ -19,6 +19,10 @@ html, body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+p {
+  text-align: justify;
 }
 
 a {
@@ -36,11 +40,23 @@ a {
 PERSONALIZADOS
 */
 
-.column{
-  display: flex;
-  flex-direction: column;
-}
-.row{
+.content-twin{
   display: flex;
   flex-direction: row;
+}
+
+.content-twin-children{
+  height: 100%;
+  width: 50%;
+}
+
+@media (max-width: 768px) {
+  .content-twin-children{
+      width: 100%;
+  }
+
+  .content-twin{
+    display: flex;
+    flex-direction: column;
+  }
 }

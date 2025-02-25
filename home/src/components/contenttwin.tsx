@@ -4,20 +4,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 interface ContentTwinProps {
   children: ReactNode[]; // Dois filhos para o conteúdo
 }
-
+const pos = ["start", "end"]
 const ContentTwin: React.FC<ContentTwinProps> = ({ children }) => {
   return (
-    <div className="content-twin d-flex"
-    style={{ height: '90vh', overflow: 'hidden', border:'1px solid white' }}>
+    <div className="content-twin d-flex h-auto justify-content-center align-content-center"
+    style={{ width:'100%', minHeight: '800px', height: '100%', overflowX: 'hidden'}}>
 
-        <div className="d-flex justify-content-center align-items-end" style={{ width: '50%', maxWidth: '100%', border:'1px solid yellow' }}>
-            {children[0]}
-        </div>
-
-        <div className="d-flex justify-content-center align-items-end" style={{ width: '50%', maxWidth: '100%', border:'1px solid green' }}>
-            {children[1]}
-        </div>
-
+       {children.map( (element, index) => (
+                <div key={index} className={`content-twin-children d-flex justify-content-center align-items-${pos[index]}`}>
+                  <div style={{ width:"80%" }}>
+                    {element}
+                  </div>
+              </div>
+       ))}
+       
     </div>
   );
 };
