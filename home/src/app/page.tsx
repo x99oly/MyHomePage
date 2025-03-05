@@ -1,8 +1,9 @@
 "use client"
-import Image from 'next/image';
 import Navbar from '@components/navbar'; 
 import ContentTwin from '@/components/contenttwin';
 import TextboxComponent from '@/components/textbox-component';
+import RandomImg from '@/components/randomimg'
+import Portfolio from '@/components/contentone';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect, useState } from 'react';
@@ -34,37 +35,14 @@ export default function Home() {
 
       <div id='about' className='d-flex justify-content-center align-content-center' style={{width:'100vw'}}>
         <ContentTwin>
-          <div className="d-flex justify-content-center align-items-center" style={{ width:'100%', minHeight: '500px', height:'100%'}}>
-            <Image 
-              src="/eu-bg-black.png" 
-              alt="" 
-              width={200} 
-              height={250} 
-              priority={false} 
-            />
-          </div>
+          <RandomImg></RandomImg>
           <div >
-            <TextboxComponent title={data?.title || ''} stacks={data?.stacks || ''} paragraphs={data?.paragraphs || []} />
+          <TextboxComponent title={data?.title || ''} stacks={data?.stacks || ''} paragraphs={data?.paragraphs || []} /> 
           </div>      
         </ContentTwin>
       </div>
 
-      <div id='portifolio' className='d-flex justify-content-center align-content-center' style={{width:'100vw'}}>
-        <ContentTwin>
-          <div className="d-flex justify-content-center align-items-center" style={{ width:'100%', minHeight: '500px', height:'100%'}}>
-            <Image 
-              src="/eu-bg-black.png" 
-              alt="" 
-              width={200} 
-              height={250} 
-              priority={false} 
-            />
-          </div>
-          <div >
-            <TextboxComponent title={data?.title || ''} stacks={data?.stacks || ''} paragraphs={data?.paragraphs || []} /> 
-          </div>      
-        </ContentTwin>
-      </div>
+      <Portfolio></Portfolio>
 
   </div>
 

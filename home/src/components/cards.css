@@ -1,0 +1,15 @@
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Garante que o mínimo de cada card seja 300px */
+    grid-gap: 2rem;
+    width: 80%; 
+    margin: 0 auto; 
+  }
+  
+  .card {
+    min-width: 350px;
+  }
+  
+  h5, p{
+    color: white !important;
+  }

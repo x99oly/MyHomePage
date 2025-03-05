@@ -2,7 +2,7 @@
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-import  Alink  from './a_link'
+import  Alink  from './alink'
 import { useEffect } from 'react'
 
 export default function Navbar() {

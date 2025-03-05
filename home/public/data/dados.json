@@ -26,12 +26,24 @@
     {
         "repositorys" : [
             {
-                "repository" : {
-                    "title" : "",
-                    "link" : "",
-                    "about" : "",
-                    "img" : ""
-                }
+                "WebApp" : {
+                    "title" : "Reuse",
+                    "link" : "https://github.com/x99oly/WebApp",
+                    "about" : "Este projeto é uma aplicação para gerenciamento de doações que conecta donors (doadores), PCs (Pontos de Coleta), e CERSAM (entidade que recebe os lotes de doações). O sistema foi desenvolvido em .NET Framework com Razor Pages, seguindo os princípios de Domain-Driven Design (DDD) e utilizando MySQL como banco de dados relacional.",
+                    "img" : "/reuse.png"
+                },
+                "Rouba-Montes" : {
+                    "title" : "Rouba Montes",
+                    "link" : "https://github.com/x99oly/Rouba-Montes",
+                    "about" : "Simulador automático do clássico jogo Rouba-Montes, implementado em C#. O programa simula partidas com múltiplos jogadores, seguindo regras de roubo e descarte de cartas, enquanto registra todas as ações em um log detalhado. Inclui configuração personalizada do jogo, rankings finais e histórico de desempenho dos jogadores.",
+                    "img" : "/baralho.jpg"
+                },
+                "MyHomePage" : {
+                    "title" : "Meu site",
+                    "link" : "https://github.com/x99oly/MyHomePage",
+                    "about" : "Aplicação desenvolvida em Next.js que tem como objetivo expor meus projetos e permitir expressar minhas idéias quanto a área de desenvolvimento de software.",
+                    "img" : "/whale.jpg"
+                 }
             }
         ]
     }

@@ -1,17 +1,19 @@
-import { TextboxInterface } from "@/interfaces/textbox-interface";
+import { TextboxInterface } from "@/interfaces/textbox-interface"
+import { RepositoryClass } from "@/entities/repository"
 
 export class ClassData {
+
   async GetTextBox(title: string): Promise<TextboxInterface | undefined> {
     const data = await this.GetDataFromJson("text-box", title);
     return data ? this.convertToTextboxInterface(data) : undefined;
   }
 
-  async GetRepository(title: string): Promise<TextboxInterface | undefined> {
+  async GetRepository(title: string): Promise<RepositoryClass | undefined> {
     const data = await this.GetDataFromJson("repositorys", title);
-    return data ? this.convertToTextboxInterface(data) : undefined;
+    return data ? this.convertToRepositoryClass(data) : undefined;
   }
 
-  async GetDataFromJson(
+  private async GetDataFromJson(
     origem: string,
     title: string
   ): Promise<{ [key: string]: string | string[] } | undefined> {
@@ -19,7 +21,7 @@ export class ClassData {
     const data = await response.json();
 
     const origemData = data.find(
-      (item: { [key: string]: any }) => item[origem]
+      (item: { [key: string]: unknown }) => item[origem]
     );
     if (origemData) {
       const arrData = origemData[origem];
@@ -31,6 +33,12 @@ export class ClassData {
     return undefined;
   }
 
+  private convertToRepositoryClass(item: {
+    [key: string]: string | string[]
+  }): RepositoryClass {
+    return new RepositoryClass(item.title, item.img, item.link, item.about)
+  }
+
   private convertToTextboxInterface(item: {
     [key: string]: string | string[];
   }): TextboxInterface {
@@ -40,4 +48,5 @@ export class ClassData {
       paragraphs: Array.isArray(item.paragraphs) ? item.paragraphs : [],
     };
   }
+
 }

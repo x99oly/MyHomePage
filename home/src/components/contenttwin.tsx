@@ -5,7 +5,7 @@ import '@/components/contenttwin.css';
 interface ContentTwinProps {
   children: ReactNode[];
 }
-const pos = ["start", "end"]
+const pos = ["center", "end"]
 const ContentTwin: React.FC<ContentTwinProps> = ({ children }) => {
   return (
     <div className="content-twin d-flex h-auto justify-content-center align-content-center">
